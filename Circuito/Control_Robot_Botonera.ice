@@ -12,12 +12,111 @@
     "graph": {
       "blocks": [
         {
+          "id": "9c29f5af-809a-47c3-acbf-7c84728f76ae",
+          "type": "basic.inputLabel",
+          "data": {
+            "name": "Izquierda_s",
+            "blockColor": "fuchsia",
+            "virtual": true,
+            "pins": [
+              {
+                "index": "0",
+                "name": "NULL",
+                "value": "NULL"
+              }
+            ]
+          },
+          "position": {
+            "x": -2008,
+            "y": 824
+          }
+        },
+        {
+          "id": "ed2352e6-8dab-401f-ba0b-4d86f70c0f7b",
+          "type": "basic.input",
+          "data": {
+            "name": "IZQUIERDA",
+            "virtual": false,
+            "pins": [
+              {
+                "index": "0",
+                "name": "D6",
+                "value": "10"
+              }
+            ],
+            "clock": false
+          },
+          "position": {
+            "x": -2424,
+            "y": 856
+          }
+        },
+        {
+          "id": "29f9ea6a-2b7e-4061-abac-741105da32af",
+          "type": "basic.output",
+          "data": {
+            "name": "Servo-DER",
+            "pins": [
+              {
+                "index": "0",
+                "name": "D12",
+                "value": "63"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 448,
+            "y": 952
+          }
+        },
+        {
+          "id": "a43f6e89-1028-42da-afd3-997acbc342c2",
+          "type": "basic.outputLabel",
+          "data": {
+            "name": "Avanzar_s",
+            "blockColor": "fuchsia",
+            "virtual": true,
+            "pins": [
+              {
+                "index": "0",
+                "name": "NULL",
+                "value": "NULL"
+              }
+            ]
+          },
+          "position": {
+            "x": -1600,
+            "y": 976
+          }
+        },
+        {
+          "id": "08af9a8c-ecfb-41ab-afb2-d9e50d24da8b",
+          "type": "basic.inputLabel",
+          "data": {
+            "name": "Derecha_s",
+            "blockColor": "fuchsia",
+            "virtual": true,
+            "pins": [
+              {
+                "index": "0",
+                "name": "NULL",
+                "value": "NULL"
+              }
+            ]
+          },
+          "position": {
+            "x": -2000,
+            "y": 1008
+          }
+        },
+        {
           "id": "f48eb17b-7d98-44f8-9775-56e666f67415",
           "type": "basic.inputLabel",
           "data": {
             "name": "PULSADORES",
             "range": "[3:0]",
-            "blockColor": "fuchsia",
+            "blockColor": "red",
             "virtual": true,
             "pins": [
               {
@@ -43,28 +142,8 @@
             ]
           },
           "position": {
-            "x": -664,
-            "y": 864
-          }
-        },
-        {
-          "id": "a43f6e89-1028-42da-afd3-997acbc342c2",
-          "type": "basic.outputLabel",
-          "data": {
-            "name": "Avanzar_s",
-            "blockColor": "fuchsia",
-            "virtual": true,
-            "pins": [
-              {
-                "index": "0",
-                "name": "NULL",
-                "value": "NULL"
-              }
-            ]
-          },
-          "position": {
-            "x": -1680,
-            "y": 992
+            "x": -560,
+            "y": 1016
           }
         },
         {
@@ -83,47 +162,28 @@
             ]
           },
           "position": {
-            "x": -1680,
-            "y": 1056
+            "x": -1600,
+            "y": 1024
           }
         },
         {
-          "id": "29f9ea6a-2b7e-4061-abac-741105da32af",
-          "type": "basic.output",
+          "id": "c9963c12-1544-41a6-b89c-7837a2fdadc6",
+          "type": "basic.input",
           "data": {
-            "name": "Servo-DER",
+            "name": "DERECHA",
+            "virtual": false,
             "pins": [
               {
                 "index": "0",
-                "name": "D12",
-                "value": "63"
+                "name": "D0",
+                "value": "2"
               }
             ],
-            "virtual": false
+            "clock": false
           },
           "position": {
-            "x": 1464,
-            "y": 1072
-          }
-        },
-        {
-          "id": "9c29f5af-809a-47c3-acbf-7c84728f76ae",
-          "type": "basic.inputLabel",
-          "data": {
-            "name": "Izquierda_s",
-            "blockColor": "fuchsia",
-            "virtual": true,
-            "pins": [
-              {
-                "index": "0",
-                "name": "NULL",
-                "value": "NULL"
-              }
-            ]
-          },
-          "position": {
-            "x": -2360,
-            "y": 1104
+            "x": -2432,
+            "y": 1040
           }
         },
         {
@@ -157,46 +217,102 @@
             ]
           },
           "position": {
-            "x": -616,
+            "x": -544,
             "y": 1120
           }
         },
         {
-          "id": "ed2352e6-8dab-401f-ba0b-4d86f70c0f7b",
+          "id": "facfe0ea-37bc-43ed-8037-a75da6dc9fd1",
+          "type": "basic.outputLabel",
+          "data": {
+            "name": "PULSADORES",
+            "range": "[3:0]",
+            "blockColor": "red",
+            "virtual": true,
+            "pins": [
+              {
+                "index": "0",
+                "name": "NULL",
+                "value": "NULL"
+              },
+              {
+                "index": "1",
+                "name": "NULL",
+                "value": "NULL"
+              },
+              {
+                "index": "2",
+                "name": "NULL",
+                "value": "NULL"
+              },
+              {
+                "index": "3",
+                "name": "NULL",
+                "value": "NULL"
+              }
+            ]
+          },
+          "position": {
+            "x": -222,
+            "y": 1144
+          }
+        },
+        {
+          "id": "d4f5fb38-e50d-4ad1-a947-67d6043e827c",
+          "type": "basic.inputLabel",
+          "data": {
+            "name": "Avanzar_s",
+            "blockColor": "fuchsia",
+            "virtual": true,
+            "pins": [
+              {
+                "index": "0",
+                "name": "NULL",
+                "value": "NULL"
+              }
+            ]
+          },
+          "position": {
+            "x": -2000,
+            "y": 1168
+          }
+        },
+        {
+          "id": "152e05fb-1cc3-4218-91ee-ed9b8460d9d4",
           "type": "basic.input",
           "data": {
-            "name": "IZQUIERDA",
+            "name": "AVANZAR",
             "virtual": false,
             "pins": [
               {
                 "index": "0",
-                "name": "D6",
-                "value": "10"
+                "name": "D4",
+                "value": "8"
               }
             ],
             "clock": false
           },
           "position": {
-            "x": -2776,
-            "y": 1136
+            "x": -2432,
+            "y": 1200
           }
         },
         {
-          "id": "e4f3c963-c71c-4c63-a297-6155e0d2e45f",
+          "id": "fc8f7a2d-e7ad-4c4a-82d7-6fa22dbaced1",
           "type": "basic.output",
           "data": {
-            "name": "LED",
+            "name": "Servo-IZQ",
             "virtual": false,
             "pins": [
               {
                 "index": "0",
-                "name": "LED0",
-                "value": "45"
+                "name": "D13",
+                "value": "64"
               }
             ]
           },
           "position": {
-            "x": 1464,
+            "x": 448,
             "y": 1264
           }
         },
@@ -216,163 +332,8 @@
             ]
           },
           "position": {
-            "x": -1664,
-            "y": 1280
-          }
-        },
-        {
-          "id": "08af9a8c-ecfb-41ab-afb2-d9e50d24da8b",
-          "type": "basic.inputLabel",
-          "data": {
-            "name": "Derecha_s",
-            "blockColor": "fuchsia",
-            "virtual": true,
-            "pins": [
-              {
-                "index": "0",
-                "name": "NULL",
-                "value": "NULL"
-              }
-            ]
-          },
-          "position": {
-            "x": -2352,
-            "y": 1288
-          }
-        },
-        {
-          "id": "c9963c12-1544-41a6-b89c-7837a2fdadc6",
-          "type": "basic.input",
-          "data": {
-            "name": "DERECHA",
-            "virtual": false,
-            "pins": [
-              {
-                "index": "0",
-                "name": "D0",
-                "value": "2"
-              }
-            ],
-            "clock": false
-          },
-          "position": {
-            "x": -2784,
-            "y": 1320
-          }
-        },
-        {
-          "id": "a20919cf-59f8-402f-9e18-b1189d5b97f9",
-          "type": "basic.outputLabel",
-          "data": {
-            "name": "Izquierda_s",
-            "blockColor": "fuchsia",
-            "virtual": true,
-            "pins": [
-              {
-                "index": "0",
-                "name": "NULL",
-                "value": "NULL"
-              }
-            ]
-          },
-          "position": {
-            "x": -1662,
-            "y": 1328
-          }
-        },
-        {
-          "id": "d4f5fb38-e50d-4ad1-a947-67d6043e827c",
-          "type": "basic.inputLabel",
-          "data": {
-            "name": "Avanzar_s",
-            "blockColor": "fuchsia",
-            "virtual": true,
-            "pins": [
-              {
-                "index": "0",
-                "name": "NULL",
-                "value": "NULL"
-              }
-            ]
-          },
-          "position": {
-            "x": -2352,
-            "y": 1448
-          }
-        },
-        {
-          "id": "facfe0ea-37bc-43ed-8037-a75da6dc9fd1",
-          "type": "basic.outputLabel",
-          "data": {
-            "name": "PULSADORES",
-            "range": "[3:0]",
-            "blockColor": "fuchsia",
-            "virtual": true,
-            "pins": [
-              {
-                "index": "0",
-                "name": "NULL",
-                "value": "NULL"
-              },
-              {
-                "index": "1",
-                "name": "NULL",
-                "value": "NULL"
-              },
-              {
-                "index": "2",
-                "name": "NULL",
-                "value": "NULL"
-              },
-              {
-                "index": "3",
-                "name": "NULL",
-                "value": "NULL"
-              }
-            ]
-          },
-          "position": {
-            "x": 354,
-            "y": 1472
-          }
-        },
-        {
-          "id": "152e05fb-1cc3-4218-91ee-ed9b8460d9d4",
-          "type": "basic.input",
-          "data": {
-            "name": "AVANZAR",
-            "virtual": false,
-            "pins": [
-              {
-                "index": "0",
-                "name": "D4",
-                "value": "8"
-              }
-            ],
-            "clock": false
-          },
-          "position": {
-            "x": -2784,
-            "y": 1480
-          }
-        },
-        {
-          "id": "fc8f7a2d-e7ad-4c4a-82d7-6fa22dbaced1",
-          "type": "basic.output",
-          "data": {
-            "name": "Servo-IZQ",
-            "virtual": false,
-            "pins": [
-              {
-                "index": "0",
-                "name": "D13",
-                "value": "64"
-              }
-            ]
-          },
-          "position": {
-            "x": 1432,
-            "y": 1576
+            "x": -1592,
+            "y": 1296
           }
         },
         {
@@ -391,8 +352,28 @@
             ]
           },
           "position": {
-            "x": -2352,
-            "y": 1608
+            "x": -2000,
+            "y": 1328
+          }
+        },
+        {
+          "id": "a20919cf-59f8-402f-9e18-b1189d5b97f9",
+          "type": "basic.outputLabel",
+          "data": {
+            "name": "Izquierda_s",
+            "blockColor": "fuchsia",
+            "virtual": true,
+            "pins": [
+              {
+                "index": "0",
+                "name": "NULL",
+                "value": "NULL"
+              }
+            ]
+          },
+          "position": {
+            "x": -1590,
+            "y": 1344
           }
         },
         {
@@ -411,8 +392,8 @@
             "clock": false
           },
           "position": {
-            "x": -2784,
-            "y": 1640
+            "x": -2432,
+            "y": 1360
           }
         },
         {
@@ -421,7 +402,7 @@
           "data": {
             "name": "PULSADORES",
             "range": "[3:0]",
-            "blockColor": "fuchsia",
+            "blockColor": "red",
             "virtual": true,
             "pins": [
               {
@@ -447,27 +428,8 @@
             ]
           },
           "position": {
-            "x": 402,
-            "y": 1688
-          }
-        },
-        {
-          "id": "fa4a5def-4507-43b7-8a7d-21a4cd21d2c3",
-          "type": "basic.output",
-          "data": {
-            "name": "LED",
-            "virtual": false,
-            "pins": [
-              {
-                "index": "0",
-                "name": "LED1",
-                "value": "44"
-              }
-            ]
-          },
-          "position": {
-            "x": 1440,
-            "y": 1768
+            "x": -224,
+            "y": 1512
           }
         },
         {
@@ -479,8 +441,8 @@
             "local": false
           },
           "position": {
-            "x": -3216,
-            "y": 984
+            "x": -2864,
+            "y": 704
           }
         },
         {
@@ -492,8 +454,8 @@
             "local": false
           },
           "position": {
-            "x": -3072,
-            "y": 984
+            "x": -2720,
+            "y": 704
           }
         },
         {
@@ -505,8 +467,8 @@
             "local": false
           },
           "position": {
-            "x": -1456,
-            "y": 768
+            "x": -1376,
+            "y": 776
           }
         },
         {
@@ -518,8 +480,8 @@
             "local": false
           },
           "position": {
-            "x": -1432,
-            "y": 1104
+            "x": -1352,
+            "y": 1112
           }
         },
         {
@@ -531,8 +493,8 @@
             "local": false
           },
           "position": {
-            "x": -1352,
-            "y": 768
+            "x": -1272,
+            "y": 776
           }
         },
         {
@@ -544,8 +506,8 @@
             "local": false
           },
           "position": {
-            "x": -1328,
-            "y": 1104
+            "x": -1248,
+            "y": 1112
           }
         },
         {
@@ -557,8 +519,8 @@
             "local": false
           },
           "position": {
-            "x": -1240,
-            "y": 768
+            "x": -1160,
+            "y": 776
           }
         },
         {
@@ -570,8 +532,8 @@
             "local": false
           },
           "position": {
-            "x": -1216,
-            "y": 1104
+            "x": -1136,
+            "y": 1112
           }
         },
         {
@@ -581,15 +543,15 @@
             "name": "Servo_Derecho",
             "list": "0x5DC0          //Retroceder \r\n0x5208          //Retroceder / 2   \r\n0x5208          //Retroceder / 2  \r\n0x4650          //Stop\r\n0x3A98          //Avanzar / 2\r\n0x4650          //Stop\r\n0x5208          //Retroceder / 2\r\n0x4650          //Stop\r\n0x2EE0          //Avanzar\r\n0x3A98          //Avanzar / 2\r\n0x3A98          //Avanzar / 2",
             "local": false,
-            "format": 10
+            "format": 2
           },
           "position": {
-            "x": -208,
-            "y": 616
+            "x": -176,
+            "y": 864
           },
           "size": {
-            "width": 704,
-            "height": 272
+            "width": 384,
+            "height": 232
           }
         },
         {
@@ -599,15 +561,15 @@
             "name": "Servo_Izquierdo",
             "list": "0x3A98          //Retroceder / 2\r\n0x3A98          //Retroceder / 2\r\n0x2EE0          //Retroceder\r\n0x4650          //Stop\r\n0x3A98          //Retroceder / 2\r\n0x4650          //Stop\r\n0x5208          //Avanzar / 2\r\n0x4650          //Stop\r\n0x5208          //Avanzar / 2\r\n0x5208          //Avanzar / 2\r\n0x5DC0          //Avanzar",
             "local": false,
-            "format": 10
+            "format": 2
           },
           "position": {
-            "x": 632,
-            "y": 528
+            "x": -176,
+            "y": 1232
           },
           "size": {
-            "width": 440,
-            "height": 280
+            "width": 392,
+            "height": 232
           }
         },
         {
@@ -619,16 +581,16 @@
             "local": true
           },
           "position": {
-            "x": 760,
-            "y": 976
+            "x": -144,
+            "y": 672
           }
         },
         {
           "id": "55adb139-955e-4698-8b81-08fae1f074f9",
           "type": "95d0aeb748ac78b1801cd0f424b4cf9296c0b999",
           "position": {
-            "x": 760,
-            "y": 1088
+            "x": -144,
+            "y": 776
           },
           "size": {
             "width": 96,
@@ -639,8 +601,8 @@
           "id": "af505a68-342e-462c-9d77-b8c1ee862e84",
           "type": "82aaa0e59178bfa3d00887ed1b393d6fdb324fa5",
           "position": {
-            "x": 1064,
-            "y": 1072
+            "x": 96,
+            "y": 760
           },
           "size": {
             "width": 96,
@@ -651,8 +613,8 @@
           "id": "74be74b3-a4ed-47eb-ac24-62aaac5c4f77",
           "type": "1bc6571cb9202e67c47f0c3ed46a6d455797845a",
           "position": {
-            "x": 1288,
-            "y": 1072
+            "x": 320,
+            "y": 952
           },
           "size": {
             "width": 96,
@@ -667,28 +629,12 @@
             "readonly": true
           },
           "position": {
-            "x": 728,
-            "y": 928
+            "x": -168,
+            "y": 624
           },
           "size": {
             "width": 192,
             "height": 48
-          }
-        },
-        {
-          "id": "0c29a22a-7889-4401-ad18-e573396fcff7",
-          "type": "basic.info",
-          "data": {
-            "info": "Comparador",
-            "readonly": true
-          },
-          "position": {
-            "x": 1384,
-            "y": 1040
-          },
-          "size": {
-            "width": 104,
-            "height": 32
           }
         },
         {
@@ -699,8 +645,8 @@
             "readonly": true
           },
           "position": {
-            "x": 1040,
-            "y": 1144
+            "x": 72,
+            "y": 712
           },
           "size": {
             "width": 168,
@@ -711,8 +657,8 @@
           "id": "cbffb015-3212-4f9f-ac48-cd3ee50d908f",
           "type": "1bc6571cb9202e67c47f0c3ed46a6d455797845a",
           "position": {
-            "x": 1296,
-            "y": 1576
+            "x": 320,
+            "y": 1264
           },
           "size": {
             "width": 96,
@@ -720,27 +666,11 @@
           }
         },
         {
-          "id": "22ed8f22-a007-4531-b7c7-afa8cf6e5f61",
-          "type": "basic.info",
-          "data": {
-            "info": "Comparador",
-            "readonly": true
-          },
-          "position": {
-            "x": 1288,
-            "y": 1544
-          },
-          "size": {
-            "width": 104,
-            "height": 32
-          }
-        },
-        {
           "id": "b3cddd1b-741a-4cf1-9f70-1a35fc2ec0a1",
           "type": "e2cdb032d0759f39ba60b1901b63159799c6ce16",
           "position": {
-            "x": 616,
-            "y": 1424
+            "x": -32,
+            "y": 1144
           },
           "size": {
             "width": 96,
@@ -751,8 +681,8 @@
           "id": "95726016-db64-478a-82d3-f748398ba9ab",
           "type": "e2cdb032d0759f39ba60b1901b63159799c6ce16",
           "position": {
-            "x": 776,
-            "y": 1712
+            "x": -24,
+            "y": 1512
           },
           "size": {
             "width": 96,
@@ -763,12 +693,12 @@
           "id": "1bb2f867-2d23-4468-b0db-f110728dda96",
           "type": "basic.info",
           "data": {
-            "info": "Pulsador de selección  \nde velocidad",
+            "info": "Avance (XX)",
             "readonly": true
           },
           "position": {
-            "x": -1664,
-            "y": 896
+            "x": -1592,
+            "y": 944
           },
           "size": {
             "width": 216,
@@ -779,8 +709,8 @@
           "id": "4e274ff1-5584-4670-9963-0705a4f000e8",
           "type": "a8938c9ec06bd37c7e9fa6d378489f1912cfe593",
           "position": {
-            "x": -1408,
-            "y": 952
+            "x": -1328,
+            "y": 960
           },
           "size": {
             "width": 96,
@@ -791,12 +721,12 @@
           "id": "999ddc7e-1225-4b30-809b-355b07e04d6b",
           "type": "basic.info",
           "data": {
-            "info": "Pulsado seleccion de giro\n",
-            "readonly": false
+            "info": "Giro (YY)",
+            "readonly": true
           },
           "position": {
-            "x": -1456,
-            "y": 1400
+            "x": -1576,
+            "y": 1272
           },
           "size": {
             "width": 216,
@@ -807,8 +737,8 @@
           "id": "75968aaf-f32e-4615-98b5-73fde64d41eb",
           "type": "a8938c9ec06bd37c7e9fa6d378489f1912cfe593",
           "position": {
-            "x": -1384,
-            "y": 1288
+            "x": -1304,
+            "y": 1296
           },
           "size": {
             "width": 96,
@@ -819,8 +749,8 @@
           "id": "b05d39fc-f7e5-4c6e-aaa5-8901a107efa0",
           "type": "84f0a15761ee8b753f67079819a7614923939472",
           "position": {
-            "x": -848,
-            "y": 976
+            "x": -768,
+            "y": 984
           },
           "size": {
             "width": 96,
@@ -831,8 +761,8 @@
           "id": "12ae6f60-7262-4d91-95b2-6289d4b76611",
           "type": "0dbcb9470111c4072304f196bb9e5ac39f4ccfb7",
           "position": {
-            "x": -1040,
-            "y": 968
+            "x": -960,
+            "y": 976
           },
           "size": {
             "width": 96,
@@ -843,8 +773,8 @@
           "id": "77638f91-cdf9-40b9-822e-33f26aaef6fc",
           "type": "0dbcb9470111c4072304f196bb9e5ac39f4ccfb7",
           "position": {
-            "x": -1040,
-            "y": 1048
+            "x": -960,
+            "y": 1056
           },
           "size": {
             "width": 96,
@@ -855,8 +785,8 @@
           "id": "0206a044-ec4e-4c9f-a4b1-bbb7107c9674",
           "type": "888484044ba40fc8b8549d9bea5e6b5c2ea0c3b7",
           "position": {
-            "x": -2536,
-            "y": 1120
+            "x": -2184,
+            "y": 840
           },
           "size": {
             "width": 96,
@@ -867,12 +797,12 @@
           "id": "b2c1f019-bfa0-4a33-afb4-e9abaaa6cf4e",
           "type": "basic.info",
           "data": {
-            "info": "# Prueba Botonera\n\nComo no se usa una configuración\nexterna Pull-Up, se configura\nel sistema del pulsador con el Pull-Up activado.\n\nAdemás, se utiliza la lógica negativa\n",
+            "info": "# Recepción pulsasiones botonera\n\nComo no se usa una configuración\nexterna Pull-Up, se configura\nel sistema del pulsador con el Pull-Up activado.\n\nAdemás, se utiliza la lógica negativa\n",
             "readonly": true
           },
           "position": {
-            "x": -3224,
-            "y": 824
+            "x": -2872,
+            "y": 544
           },
           "size": {
             "width": 496,
@@ -883,8 +813,8 @@
           "id": "f6f72044-e05f-43d2-a845-ca87491c03a9",
           "type": "888484044ba40fc8b8549d9bea5e6b5c2ea0c3b7",
           "position": {
-            "x": -2536,
-            "y": 1304
+            "x": -2184,
+            "y": 1024
           },
           "size": {
             "width": 96,
@@ -895,8 +825,8 @@
           "id": "8de3b2aa-b2d2-465f-b25f-b78f9563a0a4",
           "type": "888484044ba40fc8b8549d9bea5e6b5c2ea0c3b7",
           "position": {
-            "x": -2544,
-            "y": 1464
+            "x": -2192,
+            "y": 1184
           },
           "size": {
             "width": 96,
@@ -907,12 +837,92 @@
           "id": "465f8270-2b14-40eb-a88a-ca1af9f9c270",
           "type": "888484044ba40fc8b8549d9bea5e6b5c2ea0c3b7",
           "position": {
-            "x": -2544,
-            "y": 1624
+            "x": -2192,
+            "y": 1344
           },
           "size": {
             "width": 96,
             "height": 64
+          }
+        },
+        {
+          "id": "82347249-39dd-4c0f-b5e9-53444e9cd1c5",
+          "type": "basic.info",
+          "data": {
+            "info": "XX",
+            "readonly": true
+          },
+          "position": {
+            "x": -936,
+            "y": 936
+          },
+          "size": {
+            "width": 72,
+            "height": 48
+          }
+        },
+        {
+          "id": "fb82f792-f464-4bca-b755-8ac0b74d2d68",
+          "type": "basic.info",
+          "data": {
+            "info": "YY",
+            "readonly": true
+          },
+          "position": {
+            "x": -928,
+            "y": 1128
+          },
+          "size": {
+            "width": 72,
+            "height": 48
+          }
+        },
+        {
+          "id": "5cfb5afa-8b6c-4b86-9ecb-d70021a1589f",
+          "type": "basic.info",
+          "data": {
+            "info": "XX YY",
+            "readonly": true
+          },
+          "position": {
+            "x": -744,
+            "y": 944
+          },
+          "size": {
+            "width": 72,
+            "height": 48
+          }
+        },
+        {
+          "id": "3ba125aa-3d96-479b-abee-a1b5e49018f3",
+          "type": "basic.info",
+          "data": {
+            "info": "# Circuito de selección de estados\n\nSe reciben las señales de la botonera y se incrementan o decrementan \nlos contadores según corresponda para codificar \nlos distintos estados",
+            "readonly": true
+          },
+          "position": {
+            "x": -976,
+            "y": 688
+          },
+          "size": {
+            "width": 400,
+            "height": 192
+          }
+        },
+        {
+          "id": "02aa44ed-5af4-4d50-b56e-cbf3e8f06022",
+          "type": "basic.info",
+          "data": {
+            "info": "# Circuito de control de servos\n\nSelección de velocidades de servos en\nfunción del estado codificado en 4 bits",
+            "readonly": true
+          },
+          "position": {
+            "x": 288,
+            "y": 736
+          },
+          "size": {
+            "width": 344,
+            "height": 168
           }
         }
       ],
@@ -953,17 +963,6 @@
         },
         {
           "source": {
-            "block": "74be74b3-a4ed-47eb-ac24-62aaac5c4f77",
-            "port": "4e8afe74-8f38-4873-97ee-f7585d99a4aa"
-          },
-          "target": {
-            "block": "e4f3c963-c71c-4c63-a297-6155e0d2e45f",
-            "port": "in"
-          },
-          "vertices": []
-        },
-        {
-          "source": {
             "block": "af505a68-342e-462c-9d77-b8c1ee862e84",
             "port": "4aeeaf63-2cef-4418-b290-febf36b16240"
           },
@@ -981,17 +980,6 @@
           },
           "target": {
             "block": "fc8f7a2d-e7ad-4c4a-82d7-6fa22dbaced1",
-            "port": "in"
-          },
-          "vertices": []
-        },
-        {
-          "source": {
-            "block": "cbffb015-3212-4f9f-ac48-cd3ee50d908f",
-            "port": "4e8afe74-8f38-4873-97ee-f7585d99a4aa"
-          },
-          "target": {
-            "block": "fa4a5def-4507-43b7-8a7d-21a4cd21d2c3",
             "port": "in"
           },
           "vertices": []
@@ -1039,22 +1027,6 @@
             "block": "b3cddd1b-741a-4cf1-9f70-1a35fc2ec0a1",
             "port": "c71c44ac-0500-4eb5-9c1c-4ea21cd78377"
           }
-        },
-        {
-          "source": {
-            "block": "4cdbd817-1d83-40c7-95ea-66b10bffc5bb",
-            "port": "memory-out"
-          },
-          "target": {
-            "block": "95726016-db64-478a-82d3-f748398ba9ab",
-            "port": "c71c44ac-0500-4eb5-9c1c-4ea21cd78377"
-          },
-          "vertices": [
-            {
-              "x": 712,
-              "y": 976
-            }
-          ]
         },
         {
           "source": {
@@ -1187,7 +1159,12 @@
             "block": "77638f91-cdf9-40b9-822e-33f26aaef6fc",
             "port": "a409d207-7594-4558-8e15-89712262cf5b"
           },
-          "vertices": [],
+          "vertices": [
+            {
+              "x": -1000,
+              "y": 1320
+            }
+          ],
           "size": 2
         },
         {
@@ -1245,8 +1222,8 @@
           },
           "vertices": [
             {
-              "x": -3064,
-              "y": 1088
+              "x": -2712,
+              "y": 808
             }
           ]
         },
@@ -1261,8 +1238,8 @@
           },
           "vertices": [
             {
-              "x": -2984,
-              "y": 1064
+              "x": -2632,
+              "y": 784
             }
           ]
         },
@@ -1288,8 +1265,8 @@
           },
           "vertices": [
             {
-              "x": -3040,
-              "y": 1264
+              "x": -2688,
+              "y": 984
             }
           ]
         },
@@ -1304,8 +1281,8 @@
           },
           "vertices": [
             {
-              "x": -2896,
-              "y": 1240
+              "x": -2544,
+              "y": 960
             }
           ]
         },
@@ -1331,8 +1308,8 @@
           },
           "vertices": [
             {
-              "x": -2944,
-              "y": 1432
+              "x": -2592,
+              "y": 1152
             }
           ]
         },
@@ -1347,8 +1324,8 @@
           },
           "vertices": [
             {
-              "x": -2488,
-              "y": 1408
+              "x": -2136,
+              "y": 1128
             }
           ]
         },
@@ -1374,8 +1351,8 @@
           },
           "vertices": [
             {
-              "x": -2944,
-              "y": 1592
+              "x": -2592,
+              "y": 1312
             }
           ]
         },
@@ -1390,8 +1367,8 @@
           },
           "vertices": [
             {
-              "x": -2944,
-              "y": 1568
+              "x": -2592,
+              "y": 1288
             }
           ]
         },
@@ -1416,8 +1393,8 @@
           },
           "vertices": [
             {
-              "x": -1488,
-              "y": 1320
+              "x": -1408,
+              "y": 1328
             }
           ]
         },
@@ -1491,6 +1468,16 @@
             "port": "in"
           },
           "size": 4
+        },
+        {
+          "source": {
+            "block": "4cdbd817-1d83-40c7-95ea-66b10bffc5bb",
+            "port": "memory-out"
+          },
+          "target": {
+            "block": "95726016-db64-478a-82d3-f748398ba9ab",
+            "port": "c71c44ac-0500-4eb5-9c1c-4ea21cd78377"
+          }
         }
       ]
     }
