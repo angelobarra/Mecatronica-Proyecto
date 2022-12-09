@@ -92,6 +92,7 @@ module main #(
  wire [0:3] w60;
  wire [0:3] w61;
  wire [0:3] w62;
+ wire w63;
  assign v4adeba = w2;
  assign vab6266 = w4;
  assign w13 = vf5eb20;
@@ -153,6 +154,7 @@ module main #(
  assign w59 = w57;
  assign w59 = w58;
  assign w62 = w61;
+ assign w63 = w38;
  v95d0ae #(
   .vc5c8ea(p0)
  ) v93cc1c (
@@ -266,11 +268,6 @@ module main #(
   .ve77bd8(w42),
   .v7114a9(w50)
  );
- main_v987ead v987ead (
-  .estado(w36),
-  .caracteres(w37),
-  .data_received(w59)
- );
  vcd03fe va4eac6 (
   .v54ac99(w56),
   .v2d3366(w57),
@@ -288,6 +285,12 @@ module main #(
   .v6e1dd1(w42),
   .v5688a8(w51),
   .veabfb2(w57)
+ );
+ main_v987ead v987ead (
+  .estado(w36),
+  .caracteres(w37),
+  .data_received(w59),
+  .ir(w63)
  );
  assign vinit = 4'b0000;
 endmodule
@@ -3932,27 +3935,28 @@ endmodule
 module main_v987ead (
  input [7:0] caracteres,
  input data_received,
+ input ir,
  output [3:0] estado
 );
  reg[3:0] s;
  
  always @*
  begin
- if((caracteres == "W" || caracteres == "w") && data_received == 1)
+ if((caracteres == "W" || caracteres == "w") && data_received == 1 && ir == 0)
     begin
      s = 4'b1001; 
     end
     
- else if((caracteres == "S" || caracteres == "s") && data_received == 1)
+ else if((caracteres == "S" || caracteres == "s") && data_received == 1 && ir == 0)
      begin
       s = 4'b0001; 
      end
  
- else if((caracteres == "A" || caracteres == "a") && data_received == 1)
+ else if((caracteres == "A" || caracteres == "a") && data_received == 1 && ir == 0)
      begin
       s = 4'b0100; 
      end    
- else if((caracteres == "D" || caracteres == "d") && data_received == 1)
+ else if((caracteres == "D" || caracteres == "d") && data_received == 1 && ir == 0)
      begin
       s = 4'b0110; 
      end
