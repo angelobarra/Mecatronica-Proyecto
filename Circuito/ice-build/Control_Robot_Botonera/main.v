@@ -18,53 +18,52 @@ module main #(
 ) (
  input vf5eb20,
  input vb5a0bc,
+ input vb47e3e,
  input vd59c6a,
  input vfa88c0,
  input vclk,
  output v4adeba,
- output v67f4f7,
- output vab6266,
- output va736c9,
  output [3:0] v88719b,
- output [0:1] vinit
+ output vab6266,
+ output [0:3] vinit
 );
  localparam p0 = v89da20;
- localparam p10 = v57e811;
- localparam p11 = v4ca317;
- localparam p12 = v4bafd0;
- localparam p13 = vb97fc2;
- localparam p14 = v8d117e;
- localparam p15 = v4bfbee;
- localparam p16 = v6725bc;
- localparam p17 = vf32f30;
- localparam p25 = v2114be;
- localparam p26 = v56130b;
- localparam p28 = v2114be;
- localparam p29 = v56130b;
- localparam p31 = v2114be;
- localparam p32 = v56130b;
- localparam p34 = v2114be;
- localparam p35 = v56130b;
+ localparam p8 = v57e811;
+ localparam p14 = v2114be;
+ localparam p15 = v56130b;
+ localparam p17 = v2114be;
+ localparam p18 = v56130b;
+ localparam p20 = v2114be;
+ localparam p21 = v56130b;
+ localparam p23 = v2114be;
+ localparam p24 = v56130b;
+ localparam p26 = v4ca317;
+ localparam p27 = v4bafd0;
+ localparam p28 = vb97fc2;
+ localparam p29 = v8d117e;
+ localparam p31 = v4bfbee;
+ localparam p32 = v6725bc;
+ localparam p33 = vf32f30;
  wire [0:19] w1;
  wire w2;
- wire w3;
- wire [0:19] w4;
- wire w5;
- wire w6;
+ wire [0:19] w3;
+ wire w4;
+ wire [0:19] w5;
+ wire [0:19] w6;
  wire [0:19] w7;
- wire [0:19] w8;
- wire [0:19] w9;
- wire w18;
+ wire w9;
+ wire w10;
+ wire w11;
+ wire w12;
+ wire w13;
+ wire w16;
  wire w19;
- wire [0:1] w20;
- wire w21;
  wire w22;
- wire [0:1] w23;
- wire w24;
- wire w27;
- wire w30;
- wire w33;
- wire [0:3] w36;
+ wire [0:3] w25;
+ wire [0:1] w30;
+ wire [0:1] w34;
+ wire w35;
+ wire w36;
  wire w37;
  wire w38;
  wire w39;
@@ -72,55 +71,54 @@ module main #(
  wire w41;
  wire w42;
  wire w43;
- wire [0:3] w44;
- wire [0:3] w45;
+ wire w44;
+ wire w45;
  wire w46;
  wire w47;
- wire w48;
- wire w49;
+ wire [0:3] w48;
+ wire [0:3] w49;
+ wire w50;
  assign v4adeba = w2;
- assign v67f4f7 = w3;
- assign vab6266 = w5;
- assign va736c9 = w6;
- assign w24 = vf5eb20;
- assign w27 = vb5a0bc;
- assign w30 = vd59c6a;
- assign w33 = vfa88c0;
- assign v88719b = w36;
- assign w37 = vclk;
+ assign vab6266 = w4;
+ assign w13 = vf5eb20;
+ assign w16 = vb5a0bc;
+ assign w19 = vd59c6a;
+ assign w22 = vfa88c0;
+ assign v88719b = w25;
+ assign w35 = vb47e3e;
  assign w38 = vclk;
  assign w39 = vclk;
  assign w40 = vclk;
  assign w41 = vclk;
  assign w42 = vclk;
  assign w43 = vclk;
- assign w3 = w2;
- assign w6 = w5;
- assign w7 = w4;
- assign w38 = w37;
- assign w39 = w37;
+ assign w44 = vclk;
+ assign w5 = w3;
+ assign w37 = w36;
  assign w39 = w38;
- assign w40 = w37;
  assign w40 = w38;
  assign w40 = w39;
- assign w41 = w37;
  assign w41 = w38;
  assign w41 = w39;
  assign w41 = w40;
- assign w42 = w37;
  assign w42 = w38;
  assign w42 = w39;
  assign w42 = w40;
  assign w42 = w41;
- assign w43 = w37;
  assign w43 = w38;
  assign w43 = w39;
  assign w43 = w40;
  assign w43 = w41;
  assign w43 = w42;
- assign w44 = w36;
- assign w45 = w36;
- assign w45 = w44;
+ assign w44 = w38;
+ assign w44 = w39;
+ assign w44 = w40;
+ assign w44 = w41;
+ assign w44 = w42;
+ assign w44 = w43;
+ assign w48 = w25;
+ assign w49 = w25;
+ assign w49 = w48;
  v95d0ae #(
   .vc5c8ea(p0)
  ) v93cc1c (
@@ -128,101 +126,107 @@ module main #(
  );
  v82aaa0 v0b7853 (
   .vb2cfec(w1),
-  .vb319d4(w4),
-  .v6dda25(w37)
+  .vb319d4(w3),
+  .v6dda25(w38)
  );
  v1bc657 v610f98 (
   .v4642b6(w2),
-  .v0e4f6c(w4),
-  .v0a4fd8(w8)
+  .v0e4f6c(w3),
+  .v0a4fd8(w6)
  );
  v1bc657 vbd0afc (
-  .v4642b6(w5),
-  .v0e4f6c(w7),
-  .v0a4fd8(w9)
+  .v4642b6(w4),
+  .v0e4f6c(w5),
+  .v0a4fd8(w7)
  );
  ve2cdb0 #(
-  .vb36a78(p10)
+  .vb36a78(p8)
  ) v65d18b (
-  .vfde47f(w8),
-  .v851180(w44)
+  .vfde47f(w6),
+  .v851180(w48)
  );
  ve2cdb0 #(
-  .vb36a78(p11)
+  .vb36a78(p26)
  ) v73d4e9 (
-  .vfde47f(w9),
-  .v851180(w45)
- );
- va8938c #(
-  .v7245c7(p12),
-  .vd63c4a(p13),
-  .v4365a5(p14)
- ) v743732 (
-  .v585e5b(w20),
-  .v64da9b(w38),
-  .v27dec4(w46),
-  .v7e359d(w47)
- );
- va8938c #(
-  .v7245c7(p15),
-  .vd63c4a(p16),
-  .v4365a5(p17)
- ) vdb4622 (
-  .v585e5b(w23),
-  .v64da9b(w39),
-  .v7e359d(w48),
-  .v27dec4(w49)
+  .vfde47f(w7),
+  .v851180(w49)
  );
  v84f0a1 vd747a1 (
-  .vd84a57(w18),
-  .vf8041d(w19),
-  .vee8a83(w21),
-  .v03aaf0(w22),
-  .v11bca5(w36)
+  .vd84a57(w9),
+  .vf8041d(w10),
+  .vee8a83(w11),
+  .v03aaf0(w12),
+  .v11bca5(w25)
  );
  v0dbcb9 v241234 (
-  .v3f8943(w18),
-  .v64d863(w19),
-  .v8b19dd(w20)
+  .v3f8943(w9),
+  .v64d863(w10),
+  .v8b19dd(w30)
  );
  v0dbcb9 v70900d (
-  .v3f8943(w21),
-  .v64d863(w22),
-  .v8b19dd(w23)
+  .v3f8943(w11),
+  .v64d863(w12),
+  .v8b19dd(w34)
  );
  v888484 #(
-  .v9d2d5b(p25),
-  .v42e61f(p26)
+  .v9d2d5b(p14),
+  .v42e61f(p15)
  ) vf812ff (
-  .vd9601b(w24),
-  .vfde3d7(w40),
-  .v64879c(w48)
+  .vd9601b(w13),
+  .vfde3d7(w39),
+  .v64879c(w45)
  );
  v888484 #(
-  .v9d2d5b(p28),
-  .v42e61f(p29)
+  .v9d2d5b(p17),
+  .v42e61f(p18)
  ) v09fc70 (
-  .vd9601b(w27),
-  .vfde3d7(w41),
-  .v64879c(w49)
+  .vd9601b(w16),
+  .vfde3d7(w40),
+  .v64879c(w47)
  );
  v888484 #(
-  .v9d2d5b(p31),
-  .v42e61f(p32)
+  .v9d2d5b(p20),
+  .v42e61f(p21)
  ) vdde0e5 (
-  .vd9601b(w30),
-  .vfde3d7(w42),
+  .vd9601b(w19),
+  .vfde3d7(w41),
   .v64879c(w46)
  );
  v888484 #(
-  .v9d2d5b(p34),
-  .v42e61f(p35)
+  .v9d2d5b(p23),
+  .v42e61f(p24)
  ) v61e9ab (
-  .vd9601b(w33),
-  .vfde3d7(w43),
-  .v64879c(w47)
+  .vd9601b(w22),
+  .vfde3d7(w42),
+  .v64879c(w50)
  );
- assign vinit = 2'b00;
+ v5a86f8 #(
+  .v7245c7(p27),
+  .vd63c4a(p28),
+  .v4365a5(p29)
+ ) v44e8ff (
+  .v585e5b(w30),
+  .v83e697(w36),
+  .v64da9b(w43),
+  .v27dec4(w46),
+  .v7e359d(w50)
+ );
+ v5a86f8 #(
+  .v7245c7(p31),
+  .vd63c4a(p32),
+  .v4365a5(p33)
+ ) vdb54dd (
+  .v585e5b(w34),
+  .v83e697(w37),
+  .v64da9b(w44),
+  .v7e359d(w45),
+  .v27dec4(w47)
+ );
+ v3676a0 vc4b84c (
+  .v0e28cb(w35),
+  .vcbab45(w36)
+ );
+ assign vinit = 4'b0000;
 endmodule
 
 //---- Top entity
@@ -2177,493 +2181,6 @@ module ve2cdb0_v361fe9 #(
  end
 endmodule
 //---- Top entity
-module va8938c #(
- parameter v7245c7 = 3,
- parameter vd63c4a = 0,
- parameter v4365a5 = 0,
- parameter v4ae06c = 1,
- parameter vd73ba5 = -1
-) (
- input v64da9b,
- input v27dec4,
- input v7e359d,
- output [1:0] v585e5b,
- output v4642b6
-);
- localparam p0 = v7245c7;
- localparam p2 = vd63c4a;
- localparam p10 = v4ae06c;
- localparam p11 = vd73ba5;
- localparam p13 = v4365a5;
- wire w1;
- wire w3;
- wire [0:1] w4;
- wire w5;
- wire w6;
- wire w7;
- wire w8;
- wire w9;
- wire [0:1] w12;
- wire w14;
- wire w15;
- wire [0:1] w16;
- wire [0:1] w17;
- wire [0:1] w18;
- wire [0:1] w19;
- wire [0:1] w20;
- wire w21;
- wire w22;
- wire [0:1] w23;
- wire w24;
- wire w25;
- assign w8 = v27dec4;
- assign w9 = v7e359d;
- assign v585e5b = w12;
- assign v4642b6 = w15;
- assign w21 = v64da9b;
- assign w22 = v64da9b;
- assign w14 = w6;
- assign w17 = w12;
- assign w18 = w12;
- assign w18 = w17;
- assign w19 = w12;
- assign w19 = w17;
- assign w19 = w18;
- assign w20 = w12;
- assign w20 = w17;
- assign w20 = w18;
- assign w20 = w19;
- assign w22 = w21;
- v975cb2 #(
-  .v16d6b8(p0)
- ) vac80cd (
-  .v18e78c(w1),
-  .vea9fae(w19)
- );
- vb2090f vca3c68 (
-  .v0e28cb(w1),
-  .v3ca442(w8),
-  .vcbab45(w24)
- );
- vae2422 #(
-  .v16d6b8(p2)
- ) v1f8898 (
-  .v18e78c(w3),
-  .vea9fae(w20)
- );
- vb2090f vb16a78 (
-  .v0e28cb(w3),
-  .v3ca442(w9),
-  .vcbab45(w25)
- );
- vf39d82 #(
-  .v422d28(p13)
- ) v984be0 (
-  .v568b8a(w4),
-  .vf892a0(w6),
-  .va484f0(w12),
-  .v41eb95(w21)
- );
- veebee1 v10a720 (
-  .v7fb9b3(w4),
-  .v50d6c6(w5),
-  .vc9d156(w16),
-  .v340b68(w23)
- );
- vaa7742 v587b0e (
-  .vb4d15b(w5),
-  .va30e2e(w7),
-  .vccf27c(w24),
-  .ve229dd(w25)
- );
- v35f267 v57c556 (
-  .vcbab45(w6),
-  .v0e28cb(w7)
- );
- v81be9d #(
-  .v8d305c(p10)
- ) v47efb9 (
-  .vb5a0f8(w16),
-  .v1b2204(w17)
- );
- v81be9d #(
-  .v8d305c(p11)
- ) v8e8eb6 (
-  .v1b2204(w18),
-  .vb5a0f8(w23)
- );
- v1c7dae v8ee2bb (
-  .vf54559(w14),
-  .ve8318d(w15),
-  .va4102a(w22)
- );
-endmodule
-
-//---------------------------------------------------
-//-- count-up-dn-lim
-//-- - - - - - - - - - - - - - - - - - - - - - - - --
-//-- 2bits up-down counter with limits
-//---------------------------------------------------
-//---- Top entity
-module v975cb2 #(
- parameter v16d6b8 = 1
-) (
- input [1:0] vea9fae,
- output v18e78c
-);
- localparam p1 = v16d6b8;
- wire w0;
- wire [0:1] w2;
- assign v18e78c = w0;
- assign w2 = vea9fae;
- v975cb2_vd75681 #(
-  .B(p1)
- ) vd75681 (
-  .eq(w0),
-  .a(w2)
- );
-endmodule
-
-//---------------------------------------------------
-//-- Menor-que-1-op
-//-- - - - - - - - - - - - - - - - - - - - - - - - --
-//-- Comparador menor que, de un operando de 2 bits
-//---------------------------------------------------
-
-module v975cb2_vd75681 #(
- parameter B = 0
-) (
- input [1:0] a,
- output eq
-);
- assign eq = (a < B);
-endmodule
-//---- Top entity
-module vb2090f (
- input v0e28cb,
- input v3ca442,
- output vcbab45
-);
- wire w0;
- wire w1;
- wire w2;
- assign w0 = v0e28cb;
- assign w1 = v3ca442;
- assign vcbab45 = w2;
- vb2090f_vf4938a vf4938a (
-  .a(w0),
-  .b(w1),
-  .c(w2)
- );
-endmodule
-
-//---------------------------------------------------
-//-- AND
-//-- - - - - - - - - - - - - - - - - - - - - - - - --
-//-- Puerta AND
-//---------------------------------------------------
-
-module vb2090f_vf4938a (
- input a,
- input b,
- output c
-);
- //-- Puerta AND
- 
- //-- module and (input wire a, input wire b,
- //--             output wire c);
- 
- assign c = a & b;
- 
- //-- endmodule
-endmodule
-//---- Top entity
-module vae2422 #(
- parameter v16d6b8 = 1
-) (
- input [1:0] vea9fae,
- output v18e78c
-);
- localparam p1 = v16d6b8;
- wire w0;
- wire [0:1] w2;
- assign v18e78c = w0;
- assign w2 = vea9fae;
- vae2422_vd75681 #(
-  .B(p1)
- ) vd75681 (
-  .eq(w0),
-  .a(w2)
- );
-endmodule
-
-//---------------------------------------------------
-//-- Greather-than-2bits
-//-- - - - - - - - - - - - - - - - - - - - - - - - --
-//-- 2bits-Greather than comparator
-//---------------------------------------------------
-
-module vae2422_vd75681 #(
- parameter B = 0
-) (
- input [1:0] a,
- output eq
-);
- assign eq = (a > B);
-endmodule
-//---- Top entity
-module vf39d82 #(
- parameter v422d28 = 0
-) (
- input v41eb95,
- input [1:0] v568b8a,
- input vf892a0,
- output [1:0] va484f0
-);
- localparam p0 = v422d28;
- wire w1;
- wire w2;
- wire [0:1] w3;
- wire [0:1] w4;
- assign w1 = vf892a0;
- assign w2 = v41eb95;
- assign w3 = v568b8a;
- assign va484f0 = w4;
- vf39d82_v9148cb #(
-  .INI(p0)
- ) v9148cb (
-  .load(w1),
-  .clk(w2),
-  .d(w3),
-  .q(w4)
- );
-endmodule
-
-//---------------------------------------------------
-//-- Registro
-//-- - - - - - - - - - - - - - - - - - - - - - - - --
-//-- Registro de 2 bits
-//---------------------------------------------------
-
-module vf39d82_v9148cb #(
- parameter INI = 0
-) (
- input clk,
- input [1:0] d,
- input load,
- output [1:0] q
-);
- localparam N = 2;
- 
- reg [N-1:0] q = INI;
- 
- always @(posedge clk)
-   if (load)
-     q <= d;
-endmodule
-//---- Top entity
-module veebee1 (
- input [1:0] vc9d156,
- input [1:0] v340b68,
- input v50d6c6,
- output [1:0] v7fb9b3
-);
- wire w0;
- wire [0:1] w1;
- wire [0:1] w2;
- wire [0:1] w3;
- assign w0 = v50d6c6;
- assign v7fb9b3 = w1;
- assign w2 = vc9d156;
- assign w3 = v340b68;
- veebee1_ve4e0df ve4e0df (
-  .sel(w0),
-  .o(w1),
-  .i1(w2),
-  .i0(w3)
- );
-endmodule
-
-//---------------------------------------------------
-//-- Mux 2 a 1 de 2 bits
-//-- - - - - - - - - - - - - - - - - - - - - - - - --
-//-- Multiplexor de 2 a 1 de 2 bits
-//---------------------------------------------------
-
-module veebee1_ve4e0df (
- input [1:0] i1,
- input [1:0] i0,
- input sel,
- output [1:0] o
-);
- //-- Multiplexor de 2 a 1, 
- //-- de 2 bits
- 
- reg [1:0] o;
- 
- always @(*) begin
-     case(sel)
-         0: o = i0;
-         1: o = i1;
-         default: o = i0;
-     endcase
- end
- 
- 
-endmodule
-//---- Top entity
-module vaa7742 (
- input vccf27c,
- input ve229dd,
- output vb4d15b,
- output va30e2e
-);
- wire w0;
- wire w1;
- wire w2;
- wire w3;
- assign w0 = ve229dd;
- assign w1 = vccf27c;
- assign vb4d15b = w2;
- assign va30e2e = w3;
- vaa7742_v4407ca v4407ca (
-  .i0(w0),
-  .i1(w1),
-  .y(w2),
-  .zero(w3)
- );
-endmodule
-
-//---------------------------------------------------
-//-- Codificador-2-1
-//-- - - - - - - - - - - - - - - - - - - - - - - - --
-//-- Codificador de 2 a 1. La salida zero se activa cuando ninguna entrada está activada
-//---------------------------------------------------
-
-module vaa7742_v4407ca (
- input i1,
- input i0,
- output y,
- output zero
-);
- //-- Codificador de 2 a 1
- 
- assign zero = ({i1,i0}==2'b00);
- assign y = (i1 == 1);
- 
-endmodule
-//---- Top entity
-module v35f267 (
- input v0e28cb,
- output vcbab45
-);
- wire w0;
- wire w1;
- assign w0 = v0e28cb;
- assign vcbab45 = w1;
- v35f267_vd54ca1 vd54ca1 (
-  .a(w0),
-  .c(w1)
- );
-endmodule
-
-//---------------------------------------------------
-//-- NOT
-//-- - - - - - - - - - - - - - - - - - - - - - - - --
-//-- Puerta NOT
-//---------------------------------------------------
-
-module v35f267_vd54ca1 (
- input a,
- output c
-);
- //-- Puerta NOT
- 
- //-- module (input wire a, output wire c);
- 
- 
- assign c = ~a;
- 
- 
- //-- endmodule
- 
-endmodule
-//---- Top entity
-module v81be9d #(
- parameter v8d305c = 1
-) (
- input [1:0] v1b2204,
- output [1:0] vb5a0f8
-);
- localparam p0 = v8d305c;
- wire [0:1] w1;
- wire [0:1] w2;
- assign w1 = v1b2204;
- assign vb5a0f8 = w2;
- v81be9d_va0c26a #(
-  .k(p0)
- ) va0c26a (
-  .a(w1),
-  .s(w2)
- );
-endmodule
-
-//---------------------------------------------------
-//-- sum-1op-2bits
-//-- - - - - - - - - - - - - - - - - - - - - - - - --
-//-- Sumador de un operando de 2 bits con una constante pasada como parámetro (No hay accarreo)
-//---------------------------------------------------
-
-module v81be9d_va0c26a #(
- parameter k = 0
-) (
- input [1:0] a,
- output [1:0] s
-);
- assign s = a + k;
-endmodule
-//---- Top entity
-module v1c7dae #(
- parameter v71e305 = 0
-) (
- input va4102a,
- input vf54559,
- output ve8318d
-);
- localparam p2 = v71e305;
- wire w0;
- wire w1;
- wire w3;
- assign w0 = va4102a;
- assign ve8318d = w1;
- assign w3 = vf54559;
- v1c7dae_vb8adf8 #(
-  .INI(p2)
- ) vb8adf8 (
-  .clk(w0),
-  .q(w1),
-  .d(w3)
- );
-endmodule
-
-//---------------------------------------------------
-//-- Biestable-D
-//-- - - - - - - - - - - - - - - - - - - - - - - - --
-//-- Biestable de datos (Tipo D). Cuando se recibe un tic por load se captura el dato
-//---------------------------------------------------
-
-module v1c7dae_vb8adf8 #(
- parameter INI = 0
-) (
- input clk,
- input d,
- output q
-);
- reg q = INI;
- always @(posedge clk)
-   q <= d;
-endmodule
-//---- Top entity
 module v0dbcb9 (
  input [1:0] v8b19dd,
  output v3f8943,
@@ -3327,4 +2844,503 @@ module v6b14d5_v465065 #(
  output k
 );
  assign k = VALUE;
+endmodule
+//---- Top entity
+module v5a86f8 #(
+ parameter v7245c7 = 3,
+ parameter vd63c4a = 0,
+ parameter v4365a5 = 0,
+ parameter v4ae06c = 1,
+ parameter vd73ba5 = -1
+) (
+ input v64da9b,
+ input v83e697,
+ input v27dec4,
+ input v7e359d,
+ output [1:0] v585e5b,
+ output v4642b6
+);
+ localparam p0 = v7245c7;
+ localparam p2 = vd63c4a;
+ localparam p10 = v4ae06c;
+ localparam p11 = vd73ba5;
+ localparam p15 = v4365a5;
+ wire w1;
+ wire w3;
+ wire [0:1] w4;
+ wire w5;
+ wire w6;
+ wire w7;
+ wire w8;
+ wire w9;
+ wire [0:1] w12;
+ wire w13;
+ wire w14;
+ wire [0:1] w16;
+ wire [0:1] w17;
+ wire [0:1] w18;
+ wire [0:1] w19;
+ wire [0:1] w20;
+ wire w21;
+ wire w22;
+ wire [0:1] w23;
+ wire w24;
+ wire w25;
+ wire w26;
+ assign w8 = v27dec4;
+ assign w9 = v7e359d;
+ assign v585e5b = w12;
+ assign v4642b6 = w14;
+ assign w21 = v64da9b;
+ assign w22 = v64da9b;
+ assign w24 = v83e697;
+ assign w13 = w6;
+ assign w17 = w12;
+ assign w18 = w12;
+ assign w18 = w17;
+ assign w19 = w12;
+ assign w19 = w17;
+ assign w19 = w18;
+ assign w20 = w12;
+ assign w20 = w17;
+ assign w20 = w18;
+ assign w20 = w19;
+ assign w22 = w21;
+ v975cb2 #(
+  .v16d6b8(p0)
+ ) vac80cd (
+  .v18e78c(w1),
+  .vea9fae(w19)
+ );
+ vb2090f vca3c68 (
+  .v0e28cb(w1),
+  .v3ca442(w8),
+  .vcbab45(w25)
+ );
+ vae2422 #(
+  .v16d6b8(p2)
+ ) v1f8898 (
+  .v18e78c(w3),
+  .vea9fae(w20)
+ );
+ vb2090f vb16a78 (
+  .v0e28cb(w3),
+  .v3ca442(w9),
+  .vcbab45(w26)
+ );
+ veebee1 v10a720 (
+  .v7fb9b3(w4),
+  .v50d6c6(w5),
+  .vc9d156(w16),
+  .v340b68(w23)
+ );
+ vaa7742 v587b0e (
+  .vb4d15b(w5),
+  .va30e2e(w7),
+  .vccf27c(w25),
+  .ve229dd(w26)
+ );
+ v35f267 v57c556 (
+  .vcbab45(w6),
+  .v0e28cb(w7)
+ );
+ v81be9d #(
+  .v8d305c(p10)
+ ) v47efb9 (
+  .vb5a0f8(w16),
+  .v1b2204(w17)
+ );
+ v81be9d #(
+  .v8d305c(p11)
+ ) v8e8eb6 (
+  .v1b2204(w18),
+  .vb5a0f8(w23)
+ );
+ v1c7dae v8ee2bb (
+  .vf54559(w13),
+  .ve8318d(w14),
+  .va4102a(w22)
+ );
+ vabdfd6 #(
+  .v422d28(p15)
+ ) vf5b334 (
+  .v568b8a(w4),
+  .vf892a0(w6),
+  .va484f0(w12),
+  .v41eb95(w21),
+  .veb52e4(w24)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- count-up-dn-lim-rst
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- 2bits up-down counter with limits. Reset
+//---------------------------------------------------
+//---- Top entity
+module v975cb2 #(
+ parameter v16d6b8 = 1
+) (
+ input [1:0] vea9fae,
+ output v18e78c
+);
+ localparam p1 = v16d6b8;
+ wire w0;
+ wire [0:1] w2;
+ assign v18e78c = w0;
+ assign w2 = vea9fae;
+ v975cb2_vd75681 #(
+  .B(p1)
+ ) vd75681 (
+  .eq(w0),
+  .a(w2)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- Menor-que-1-op
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- Comparador menor que, de un operando de 2 bits
+//---------------------------------------------------
+
+module v975cb2_vd75681 #(
+ parameter B = 0
+) (
+ input [1:0] a,
+ output eq
+);
+ assign eq = (a < B);
+endmodule
+//---- Top entity
+module vb2090f (
+ input v0e28cb,
+ input v3ca442,
+ output vcbab45
+);
+ wire w0;
+ wire w1;
+ wire w2;
+ assign w0 = v0e28cb;
+ assign w1 = v3ca442;
+ assign vcbab45 = w2;
+ vb2090f_vf4938a vf4938a (
+  .a(w0),
+  .b(w1),
+  .c(w2)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- AND
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- Puerta AND
+//---------------------------------------------------
+
+module vb2090f_vf4938a (
+ input a,
+ input b,
+ output c
+);
+ //-- Puerta AND
+ 
+ //-- module and (input wire a, input wire b,
+ //--             output wire c);
+ 
+ assign c = a & b;
+ 
+ //-- endmodule
+endmodule
+//---- Top entity
+module vae2422 #(
+ parameter v16d6b8 = 1
+) (
+ input [1:0] vea9fae,
+ output v18e78c
+);
+ localparam p1 = v16d6b8;
+ wire w0;
+ wire [0:1] w2;
+ assign v18e78c = w0;
+ assign w2 = vea9fae;
+ vae2422_vd75681 #(
+  .B(p1)
+ ) vd75681 (
+  .eq(w0),
+  .a(w2)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- Greather-than-2bits
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- 2bits-Greather than comparator
+//---------------------------------------------------
+
+module vae2422_vd75681 #(
+ parameter B = 0
+) (
+ input [1:0] a,
+ output eq
+);
+ assign eq = (a > B);
+endmodule
+//---- Top entity
+module veebee1 (
+ input [1:0] vc9d156,
+ input [1:0] v340b68,
+ input v50d6c6,
+ output [1:0] v7fb9b3
+);
+ wire w0;
+ wire [0:1] w1;
+ wire [0:1] w2;
+ wire [0:1] w3;
+ assign w0 = v50d6c6;
+ assign v7fb9b3 = w1;
+ assign w2 = vc9d156;
+ assign w3 = v340b68;
+ veebee1_ve4e0df ve4e0df (
+  .sel(w0),
+  .o(w1),
+  .i1(w2),
+  .i0(w3)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- Mux 2 a 1 de 2 bits
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- Multiplexor de 2 a 1 de 2 bits
+//---------------------------------------------------
+
+module veebee1_ve4e0df (
+ input [1:0] i1,
+ input [1:0] i0,
+ input sel,
+ output [1:0] o
+);
+ //-- Multiplexor de 2 a 1, 
+ //-- de 2 bits
+ 
+ reg [1:0] o;
+ 
+ always @(*) begin
+     case(sel)
+         0: o = i0;
+         1: o = i1;
+         default: o = i0;
+     endcase
+ end
+ 
+ 
+endmodule
+//---- Top entity
+module vaa7742 (
+ input vccf27c,
+ input ve229dd,
+ output vb4d15b,
+ output va30e2e
+);
+ wire w0;
+ wire w1;
+ wire w2;
+ wire w3;
+ assign w0 = ve229dd;
+ assign w1 = vccf27c;
+ assign vb4d15b = w2;
+ assign va30e2e = w3;
+ vaa7742_v4407ca v4407ca (
+  .i0(w0),
+  .i1(w1),
+  .y(w2),
+  .zero(w3)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- Codificador-2-1
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- Codificador de 2 a 1. La salida zero se activa cuando ninguna entrada está activada
+//---------------------------------------------------
+
+module vaa7742_v4407ca (
+ input i1,
+ input i0,
+ output y,
+ output zero
+);
+ //-- Codificador de 2 a 1
+ 
+ assign zero = ({i1,i0}==2'b00);
+ assign y = (i1 == 1);
+ 
+endmodule
+//---- Top entity
+module v35f267 (
+ input v0e28cb,
+ output vcbab45
+);
+ wire w0;
+ wire w1;
+ assign w0 = v0e28cb;
+ assign vcbab45 = w1;
+ v35f267_vd54ca1 vd54ca1 (
+  .a(w0),
+  .c(w1)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- NOT
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- Puerta NOT
+//---------------------------------------------------
+
+module v35f267_vd54ca1 (
+ input a,
+ output c
+);
+ //-- Puerta NOT
+ 
+ //-- module (input wire a, output wire c);
+ 
+ 
+ assign c = ~a;
+ 
+ 
+ //-- endmodule
+ 
+endmodule
+//---- Top entity
+module v81be9d #(
+ parameter v8d305c = 1
+) (
+ input [1:0] v1b2204,
+ output [1:0] vb5a0f8
+);
+ localparam p0 = v8d305c;
+ wire [0:1] w1;
+ wire [0:1] w2;
+ assign w1 = v1b2204;
+ assign vb5a0f8 = w2;
+ v81be9d_va0c26a #(
+  .k(p0)
+ ) va0c26a (
+  .a(w1),
+  .s(w2)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- sum-1op-2bits
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- Sumador de un operando de 2 bits con una constante pasada como parámetro (No hay accarreo)
+//---------------------------------------------------
+
+module v81be9d_va0c26a #(
+ parameter k = 0
+) (
+ input [1:0] a,
+ output [1:0] s
+);
+ assign s = a + k;
+endmodule
+//---- Top entity
+module v1c7dae #(
+ parameter v71e305 = 0
+) (
+ input va4102a,
+ input vf54559,
+ output ve8318d
+);
+ localparam p2 = v71e305;
+ wire w0;
+ wire w1;
+ wire w3;
+ assign w0 = va4102a;
+ assign ve8318d = w1;
+ assign w3 = vf54559;
+ v1c7dae_vb8adf8 #(
+  .INI(p2)
+ ) vb8adf8 (
+  .clk(w0),
+  .q(w1),
+  .d(w3)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- Biestable-D
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- Biestable de datos (Tipo D). Cuando se recibe un tic por load se captura el dato
+//---------------------------------------------------
+
+module v1c7dae_vb8adf8 #(
+ parameter INI = 0
+) (
+ input clk,
+ input d,
+ output q
+);
+ reg q = INI;
+ always @(posedge clk)
+   q <= d;
+endmodule
+//---- Top entity
+module vabdfd6 #(
+ parameter v422d28 = 0
+) (
+ input v41eb95,
+ input veb52e4,
+ input [1:0] v568b8a,
+ input vf892a0,
+ output [1:0] va484f0
+);
+ localparam p0 = v422d28;
+ wire w1;
+ wire w2;
+ wire [0:1] w3;
+ wire [0:1] w4;
+ wire w5;
+ assign w1 = vf892a0;
+ assign w2 = v41eb95;
+ assign w3 = v568b8a;
+ assign va484f0 = w4;
+ assign w5 = veb52e4;
+ vabdfd6_v9148cb #(
+  .INI(p0)
+ ) v9148cb (
+  .load(w1),
+  .clk(w2),
+  .d(w3),
+  .q(w4),
+  .rst(w5)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- Registro
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- Registro de 2 bits con reset
+//---------------------------------------------------
+
+module vabdfd6_v9148cb #(
+ parameter INI = 0
+) (
+ input clk,
+ input rst,
+ input [1:0] d,
+ input load,
+ output [1:0] q
+);
+ localparam N = 2;
+ 
+ reg [N-1:0] q = INI;
+ 
+ always @(posedge clk)
+   if (rst)
+     q <= INI;
+   else
+     if (load)
+       q <= d;
 endmodule
