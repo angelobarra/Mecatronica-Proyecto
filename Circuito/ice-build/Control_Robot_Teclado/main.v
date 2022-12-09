@@ -12,23 +12,22 @@ module main #(
  parameter v6725bc = 0,
  parameter v8d117e = 1,
  parameter vf32f30 = 1,
+ parameter v480475 = 500,
  parameter v57e811 = "v57e811.list",
  parameter v4ca317 = "v4ca317.list",
- parameter v89da20 = 240000-1,
- parameter v68f816 = 2
+ parameter v89da20 = 240000-1
 ) (
  input vf5eb20,
  input vb5a0bc,
  input vb47e3e,
  input vd59c6a,
  input vfa88c0,
- input vd70484,
+ input vdd00ed,
  input vclk,
  output v4adeba,
  output vab6266,
- output [3:0] v9a8646,
- output [1:0] vdd868a,
- output [0:1] vinit
+ output [3:0] v234d17,
+ output [0:3] vinit
 );
  localparam p0 = v89da20;
  localparam p8 = v57e811;
@@ -47,7 +46,7 @@ module main #(
  localparam p30 = v4bfbee;
  localparam p31 = v6725bc;
  localparam p32 = vf32f30;
- localparam p41 = v68f816;
+ localparam p41 = v480475;
  wire [0:19] w1;
  wire w2;
  wire [0:19] w3;
@@ -67,16 +66,16 @@ module main #(
  wire [0:1] w33;
  wire w34;
  wire w35;
- wire w36;
- wire w37;
- wire [0:3] w38;
- wire [0:3] w39;
- wire [0:3] w40;
- wire [0:7] w42;
+ wire [0:3] w36;
+ wire [0:7] w37;
+ wire w38;
+ wire w39;
+ wire w40;
+ wire w42;
  wire w43;
  wire w44;
- wire [0:1] w45;
- wire [0:1] w46;
+ wire w45;
+ wire w46;
  wire w47;
  wire w48;
  wire w49;
@@ -86,11 +85,13 @@ module main #(
  wire w53;
  wire w54;
  wire w55;
- wire w56;
+ wire [0:3] w56;
  wire w57;
  wire w58;
  wire w59;
- wire w60;
+ wire [0:3] w60;
+ wire [0:3] w61;
+ wire [0:3] w62;
  assign v4adeba = w2;
  assign vab6266 = w4;
  assign w13 = vf5eb20;
@@ -98,70 +99,60 @@ module main #(
  assign w19 = vd59c6a;
  assign w22 = vfa88c0;
  assign w34 = vb47e3e;
- assign w37 = vd70484;
- assign v9a8646 = w40;
- assign vdd868a = w45;
+ assign w35 = vdd00ed;
+ assign v234d17 = w36;
+ assign w43 = vclk;
+ assign w44 = vclk;
+ assign w45 = vclk;
+ assign w46 = vclk;
  assign w47 = vclk;
  assign w48 = vclk;
  assign w49 = vclk;
  assign w50 = vclk;
  assign w51 = vclk;
- assign w52 = vclk;
- assign w53 = vclk;
- assign w54 = vclk;
- assign w55 = vclk;
- assign w56 = vclk;
  assign w5 = w3;
- assign w36 = w35;
- assign w39 = w38;
- assign w40 = w38;
  assign w40 = w39;
+ assign w44 = w43;
+ assign w45 = w43;
+ assign w45 = w44;
+ assign w46 = w43;
+ assign w46 = w44;
  assign w46 = w45;
+ assign w47 = w43;
+ assign w47 = w44;
+ assign w47 = w45;
+ assign w47 = w46;
+ assign w48 = w43;
+ assign w48 = w44;
+ assign w48 = w45;
+ assign w48 = w46;
  assign w48 = w47;
+ assign w49 = w43;
+ assign w49 = w44;
+ assign w49 = w45;
+ assign w49 = w46;
  assign w49 = w47;
  assign w49 = w48;
+ assign w50 = w43;
+ assign w50 = w44;
+ assign w50 = w45;
+ assign w50 = w46;
  assign w50 = w47;
  assign w50 = w48;
  assign w50 = w49;
+ assign w51 = w43;
+ assign w51 = w44;
+ assign w51 = w45;
+ assign w51 = w46;
  assign w51 = w47;
  assign w51 = w48;
  assign w51 = w49;
  assign w51 = w50;
- assign w52 = w47;
- assign w52 = w48;
- assign w52 = w49;
- assign w52 = w50;
- assign w52 = w51;
- assign w53 = w47;
- assign w53 = w48;
- assign w53 = w49;
- assign w53 = w50;
- assign w53 = w51;
- assign w53 = w52;
- assign w54 = w47;
- assign w54 = w48;
- assign w54 = w49;
- assign w54 = w50;
- assign w54 = w51;
- assign w54 = w52;
- assign w54 = w53;
- assign w55 = w47;
- assign w55 = w48;
- assign w55 = w49;
- assign w55 = w50;
- assign w55 = w51;
- assign w55 = w52;
- assign w55 = w53;
- assign w55 = w54;
- assign w56 = w47;
- assign w56 = w48;
- assign w56 = w49;
- assign w56 = w50;
- assign w56 = w51;
- assign w56 = w52;
- assign w56 = w53;
- assign w56 = w54;
- assign w56 = w55;
+ assign w56 = w36;
+ assign w58 = w57;
+ assign w59 = w57;
+ assign w59 = w58;
+ assign w62 = w61;
  v95d0ae #(
   .vc5c8ea(p0)
  ) v93cc1c (
@@ -170,7 +161,7 @@ module main #(
  v82aaa0 v0b7853 (
   .vb2cfec(w1),
   .vb319d4(w3),
-  .v6dda25(w47)
+  .v6dda25(w43)
  );
  v1bc657 v610f98 (
   .v4642b6(w2),
@@ -186,19 +177,20 @@ module main #(
   .vb36a78(p8)
  ) v65d18b (
   .vfde47f(w6),
-  .v851180(w39)
+  .v851180(w62)
  );
  ve2cdb0 #(
   .vb36a78(p25)
  ) v73d4e9 (
   .vfde47f(w7),
-  .v851180(w38)
+  .v851180(w61)
  );
  v84f0a1 vd747a1 (
   .vd84a57(w9),
   .vf8041d(w10),
   .vee8a83(w11),
-  .v03aaf0(w12)
+  .v03aaf0(w12),
+  .v11bca5(w60)
  );
  v0dbcb9 v241234 (
   .v3f8943(w9),
@@ -215,32 +207,32 @@ module main #(
   .v42e61f(p15)
  ) vf812ff (
   .vd9601b(w13),
-  .vfde3d7(w48),
-  .v64879c(w57)
+  .vfde3d7(w44),
+  .v64879c(w52)
  );
  v888484 #(
   .v9d2d5b(p17),
   .v42e61f(p18)
  ) v09fc70 (
   .vd9601b(w16),
-  .vfde3d7(w49),
-  .v64879c(w59)
+  .vfde3d7(w45),
+  .v64879c(w54)
  );
  v888484 #(
   .v9d2d5b(p20),
   .v42e61f(p21)
  ) vdde0e5 (
   .vd9601b(w19),
-  .vfde3d7(w50),
-  .v64879c(w58)
+  .vfde3d7(w46),
+  .v64879c(w53)
  );
  v888484 #(
   .v9d2d5b(p23),
   .v42e61f(p24)
  ) v61e9ab (
   .vd9601b(w22),
-  .vfde3d7(w51),
-  .v64879c(w60)
+  .vfde3d7(w47),
+  .v64879c(w55)
  );
  v5a86f8 #(
   .v7245c7(p26),
@@ -248,10 +240,10 @@ module main #(
   .v4365a5(p28)
  ) v44e8ff (
   .v585e5b(w29),
-  .v83e697(w35),
-  .v64da9b(w52),
-  .v27dec4(w58),
-  .v7e359d(w60)
+  .v83e697(w39),
+  .v64da9b(w48),
+  .v27dec4(w53),
+  .v7e359d(w55)
  );
  v5a86f8 #(
   .v7245c7(p30),
@@ -259,42 +251,45 @@ module main #(
   .v4365a5(p32)
  ) vdb54dd (
   .v585e5b(w33),
-  .v83e697(w36),
-  .v64da9b(w53),
-  .v7e359d(w57),
-  .v27dec4(w59)
+  .v83e697(w40),
+  .v64da9b(w49),
+  .v7e359d(w52),
+  .v27dec4(w54)
  );
  v3676a0 vc4b84c (
   .v0e28cb(w34),
-  .vcbab45(w35)
+  .vcbab45(w38)
  );
- vb9ce14 v6beb85 (
-  .v6a1cbe(w37),
-  .v2d03ef(w42),
-  .v6a2ebd(w44),
-  .v7114a9(w54)
+ vb9ce14 v2648ec (
+  .v6a1cbe(w35),
+  .v2d03ef(w37),
+  .ve77bd8(w42),
+  .v7114a9(w50)
  );
- v5b3e69 #(
-  .v207e0d(p41)
- ) v825a2a (
-  .v8337bc(w43),
-  .v531e20(w55)
+ main_v987ead v987ead (
+  .estado(w36),
+  .caracteres(w37),
+  .data_received(w59)
  );
- v9b3ba2 v98da00 (
- 
+ vcd03fe va4eac6 (
+  .v54ac99(w56),
+  .v2d3366(w57),
+  .ve2616d(w60),
+  .v6833fd(w61)
  );
- main_v571d94 v571d94 (
-  .estado(w38),
-  .caracteres(w42),
-  .contador(w46)
+ v873425 v021a65 (
+  .v0e28cb(w38),
+  .vcbab45(w39),
+  .v3ca442(w58)
  );
- v5a86f8 vfc54b2 (
-  .v27dec4(w43),
-  .v83e697(w44),
-  .v585e5b(w45),
-  .v64da9b(w56)
+ vf91a27 #(
+  .v187a47(p41)
+ ) va666d6 (
+  .v6e1dd1(w42),
+  .v5688a8(w51),
+  .veabfb2(w57)
  );
- assign vinit = 2'b00;
+ assign vinit = 4'b0000;
 endmodule
 
 //---- Top entity
@@ -3661,147 +3656,303 @@ module vb9ce14_vf55761 #(
  
 endmodule
 //---- Top entity
-module v5b3e69 #(
- parameter v207e0d = 1
-) (
- input v531e20,
- output v8337bc
+module vcd03fe (
+ input [3:0] v54ac99,
+ input [3:0] ve2616d,
+ input v2d3366,
+ output [3:0] v6833fd
 );
- localparam p2 = v207e0d;
  wire w0;
  wire w1;
- assign v8337bc = w0;
- assign w1 = v531e20;
- v5b3e69_v94c6d7 #(
-  .SEG(p2)
- ) v94c6d7 (
-  .clk_o(w0),
-  .clk(w1)
+ wire w2;
+ wire [0:3] w3;
+ wire w4;
+ wire [0:3] w5;
+ wire [0:3] w6;
+ wire w7;
+ wire w8;
+ wire w9;
+ wire w10;
+ wire w11;
+ wire w12;
+ wire w13;
+ wire w14;
+ wire w15;
+ wire w16;
+ wire w17;
+ wire w18;
+ assign v6833fd = w3;
+ assign w5 = ve2616d;
+ assign w6 = v54ac99;
+ assign w9 = v2d3366;
+ assign w10 = v2d3366;
+ assign w11 = v2d3366;
+ assign w12 = v2d3366;
+ assign w10 = w9;
+ assign w11 = w9;
+ assign w11 = w10;
+ assign w12 = w9;
+ assign w12 = w10;
+ assign w12 = w11;
+ vd0c4e5 v6d94c9 (
+  .v030ad0(w0),
+  .v2d3366(w11),
+  .v27dec4(w15),
+  .vb192d0(w17)
+ );
+ vd0c4e5 vebe465 (
+  .v030ad0(w1),
+  .v2d3366(w12),
+  .v27dec4(w16),
+  .vb192d0(w18)
+ );
+ vd0c4e5 ve1c21f (
+  .v030ad0(w2),
+  .v2d3366(w10),
+  .v27dec4(w13),
+  .vb192d0(w14)
+ );
+ v84f0a1 va44bdf (
+  .vee8a83(w0),
+  .v03aaf0(w1),
+  .vf8041d(w2),
+  .v11bca5(w3),
+  .vd84a57(w4)
+ );
+ vd0c4e5 v2ebff3 (
+  .v030ad0(w4),
+  .v27dec4(w7),
+  .vb192d0(w8),
+  .v2d3366(w9)
+ );
+ vc4f23a v3c3a57 (
+  .v985fcb(w5),
+  .v4f1fd3(w8),
+  .vda577d(w14),
+  .v3f8943(w17),
+  .v64d863(w18)
+ );
+ vc4f23a vd6d480 (
+  .v985fcb(w6),
+  .v4f1fd3(w7),
+  .vda577d(w13),
+  .v3f8943(w15),
+  .v64d863(w16)
  );
 endmodule
 
 //---------------------------------------------------
-//-- Corazon_Seg
+//-- 4-bits-Mux-2-1
 //-- - - - - - - - - - - - - - - - - - - - - - - - --
-//-- Bombear 1 bit con el periodo especificado en el parámetro. Por defecto el periodo es de 1 segundos
+//-- 2-to-1 Multplexer (4-bit channels)
+//---------------------------------------------------
+//---- Top entity
+module vd0c4e5 (
+ input v27dec4,
+ input vb192d0,
+ input v2d3366,
+ output v030ad0
+);
+ wire w0;
+ wire w1;
+ wire w2;
+ wire w3;
+ wire w4;
+ wire w5;
+ wire w6;
+ wire w7;
+ assign v030ad0 = w0;
+ assign w2 = v2d3366;
+ assign w3 = v2d3366;
+ assign w6 = v27dec4;
+ assign w7 = vb192d0;
+ assign w3 = w2;
+ v873425 vaaee1f (
+  .vcbab45(w0),
+  .v0e28cb(w1),
+  .v3ca442(w4)
+ );
+ vba518e v569873 (
+  .vcbab45(w1),
+  .v3ca442(w2),
+  .v0e28cb(w6)
+ );
+ v3676a0 v1f00ae (
+  .v0e28cb(w3),
+  .vcbab45(w5)
+ );
+ vba518e vc8527f (
+  .vcbab45(w4),
+  .v3ca442(w5),
+  .v0e28cb(w7)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- Mux-2-1
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- 2-to-1 Multplexer (1-bit channels)
+//---------------------------------------------------
+//---- Top entity
+module vf91a27 #(
+ parameter v187a47 = 100
+) (
+ input v5688a8,
+ input v6e1dd1,
+ output veabfb2,
+ output va9e2af
+);
+ localparam p4 = v187a47;
+ wire w0;
+ wire w1;
+ wire w2;
+ wire w3;
+ assign w0 = v6e1dd1;
+ assign veabfb2 = w1;
+ assign va9e2af = w2;
+ assign w3 = v5688a8;
+ vf91a27_v3140f5 #(
+  .MS(p4)
+ ) v3140f5 (
+  .start(w0),
+  .p(w1),
+  .tic(w2),
+  .clk(w3)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- timer-msec
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- Temporizador en milisegundos. La señal p está activa durante el tiempo indicado. Por tic se emite un tic al finalizar
 //---------------------------------------------------
 
-module v5b3e69_v94c6d7 #(
- parameter SEG = 0
+module vf91a27_v3140f5 #(
+ parameter MS = 0
 ) (
  input clk,
- output clk_o
+ input start,
+ output p,
+ output tic
 );
+ //localparam MS;
  
- //parameter HZ=1;
- 
- //-- Constante para dividir y obtener una frecuencia de 1Hz
- localparam M = 12000000*SEG;
+ //-- Constante para dividir y obtener una señal de  
+ //-- periodo 1ms
+ localparam M = 12000;
  
  //-- Calcular el numero de bits para almacenar M
  localparam N = $clog2(M);
  
- //-- Registro del divisor
- reg [N-1:0] divcounter;
+ //-- Cable de reset para el corazon
+ wire rst_heart;
  
- //-- Temporal clock
- reg clk_t = 0;
+ //-- Overflow del temporizador del corazon
+ wire ov_heart;
  
- //-- Se usa un contador modulo M/2 para luego
- //-- pasarlo por un biestable T y dividir la frecuencia
- //-- entre 2, para que el ciclo de trabajo sea del 50%
+ //-- Habilitacion del corazon
+ wire ena;
+ 
+ //-- Tics del corazon
+ wire tic_heart;
+ 
+ //-- Contador del corazon
+ reg [N-1:0] heart=0;
+ 
  always @(posedge clk)
-     if (divcounter == M/2) begin
-       clk_t <= 1;
-       divcounter = 0;
-     end 
-     else begin
-       divcounter <=  divcounter + 1;
-       clk_t = 0;
-     end 
-   
- reg clk_o = 0;  
+   if (rst_heart)
+     heart <= 0;
+   else
+     heart <= heart + 1;
+ 
+ //-- Overflow del contador
+ assign ov_heart = (heart == M-1);
+ 
+ //-- La salida del corazon es la señal de overflow
+ assign tic_heart = ov_heart;
+ 
+ //-- Reset del corazon
+ assign rst_heart =~ena | ov_heart;
+ 
+ 
+ 
+ //--------------------------------------------
+ //-- Contador de tics
+ //--------------------------------------------
+ 
+ //-- Calcular el numero de bits para almacenar MS tics
+ localparam CB = $clog2(MS);
+ 
+ reg [CB-1:0] counter = 0;
+ 
+ //-- Overflow del contador
+ wire ov;
+ 
+ //-- Señal de reset del contador
+ wire rst;
+ 
+ always @(posedge clk)
+ if (rst)
+   counter <= 0;
+ else
+   if (tic_heart)
+     counter <= counter + 1;
+ 
+ //-- Evento: cuenta máxima de tics alcanzada
+ assign ov = (counter == MS);
+ 
+ //---------------------------------------
+ //-- Biestable de estado del timer
+ //-- 0: Apagado  
+ //-- 1: Funcionando
+ reg q = 0;
+ 
+ always @(posedge clk)
+   if (start)
+     q <= 1'b1;
+   else if (rst)
+     q<=1'b0;
      
- //-- Biestable T para obtener ciclo de trabajo del 50%
- always @(posedge clk)
-   if (clk_t)
-     clk_o <= ~clk_o;
+ //-- Lógica de reset
+ //En función de la entrada, el estado y  
+ // el overflow se inicializa el contador y 
+ // se habilita el corazón de tics
+ assign rst = ~q | ov | start;
+ assign ena = ~rst;
+ 
+ //-- Salida de pulso
+ assign p = q;
+ 
+ //-- Salida de tic
+ //-- Saca un tic cuando ha finalizado la cuenta
+ assign tic = ov;
  
 endmodule
-//---- Top entity
-module v9b3ba2 #(
- parameter vfffc23 = 3
-) (
- output [1:0] v2978f0
-);
- localparam p1 = vfffc23;
- wire [0:1] w0;
- assign v2978f0 = w0;
- vb6461b #(
-  .vc5c8ea(p1)
- ) vb36826 (
-  .vb24d16(w0)
- );
-endmodule
 
-//---------------------------------------------------
-//-- 2bits-Value_3
-//-- - - - - - - - - - - - - - - - - - - - - - - - --
-//-- 2bits constant value: 3
-//---------------------------------------------------
-//---- Top entity
-module vb6461b #(
- parameter vc5c8ea = 0
-) (
- output [1:0] vb24d16
-);
- localparam p0 = vc5c8ea;
- wire [0:1] w1;
- assign vb24d16 = w1;
- vb6461b_v465065 #(
-  .VALUE(p0)
- ) v465065 (
-  .k(w1)
- );
-endmodule
-
-//---------------------------------------------------
-//-- 2-bits-gen-constant
-//-- - - - - - - - - - - - - - - - - - - - - - - - --
-//-- Generic: 2-bits generic constant (0,1,2,3)
-//---------------------------------------------------
-
-module vb6461b_v465065 #(
- parameter VALUE = 0
-) (
- output [1:0] k
-);
- assign k = VALUE;
-endmodule
-
-module main_v571d94 (
+module main_v987ead (
  input [7:0] caracteres,
- input [1:0] contador,
+ input data_received,
  output [3:0] estado
 );
  reg[3:0] s;
+ 
  always @*
  begin
- if((caracteres == "W" || caracteres == "w") && contador < 2)
+ if((caracteres == "W" || caracteres == "w") && data_received == 1)
     begin
      s = 4'b1001; 
     end
     
- else if(caracteres == "S" || caracteres == "s")
+ else if((caracteres == "S" || caracteres == "s") && data_received == 1)
      begin
       s = 4'b0001; 
      end
  
- else if(caracteres == "A" || caracteres == "a")
+ else if((caracteres == "A" || caracteres == "a") && data_received == 1)
      begin
       s = 4'b0100; 
      end    
- else if(caracteres == "D" || caracteres == "d")
+ else if((caracteres == "D" || caracteres == "d") && data_received == 1)
      begin
       s = 4'b0110; 
      end

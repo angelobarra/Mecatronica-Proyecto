@@ -3,29 +3,60 @@
 `default_nettype none
 
 //---- Top entity
-module main (
+module main #(
+ parameter v2e4d79 = 1
+) (
  input ve48d8d,
  input vclk,
- output [3:0] v298754,
- output [0:3] vinit
+ output vd85cb9,
+ output [3:0] v351668,
+ output [0:2] vinit
 );
+ localparam p3 = v2e4d79;
  wire w0;
  wire [0:7] w1;
- wire [0:3] w2;
- wire w3;
+ wire w2;
+ wire w4;
+ wire [0:3] w5;
+ wire w6;
+ wire [0:3] w7;
+ wire [0:3] w8;
+ wire w9;
+ wire w10;
  assign w0 = ve48d8d;
- assign v298754 = w2;
- assign w3 = vclk;
+ assign vd85cb9 = w4;
+ assign v351668 = w8;
+ assign w9 = vclk;
+ assign w10 = vclk;
+ assign w6 = w4;
+ assign w10 = w9;
  vb9ce14 vce97e0 (
   .v6a1cbe(w0),
   .v2d03ef(w1),
-  .v7114a9(w3)
+  .ve77bd8(w2),
+  .v7114a9(w9)
  );
  main_vf24429 vf24429 (
   .caracteres(w1),
-  .estado(w2)
+  .estado(w5)
  );
- assign vinit = 4'b0000;
+ v56885a #(
+  .v187a47(p3)
+ ) vffccdf (
+  .v6e1dd1(w2),
+  .veabfb2(w4),
+  .v5688a8(w10)
+ );
+ vcd03fe vfe99d9 (
+  .v54ac99(w5),
+  .v2d3366(w6),
+  .ve2616d(w7),
+  .v6833fd(w8)
+ );
+ v1740c5 vc3db2f (
+  .v919d0f(w7)
+ );
+ assign vinit = 3'b000;
 endmodule
 
 //---- Top entity
@@ -275,6 +306,515 @@ module vb9ce14_vf55761 #(
  assign busy = state;
  
  
+endmodule
+//---- Top entity
+module v56885a #(
+ parameter v187a47 = 1
+) (
+ input v5688a8,
+ input v6e1dd1,
+ output veabfb2,
+ output va9e2af
+);
+ localparam p0 = v187a47;
+ wire w1;
+ wire w2;
+ wire w3;
+ wire w4;
+ assign w1 = v6e1dd1;
+ assign veabfb2 = w2;
+ assign va9e2af = w3;
+ assign w4 = v5688a8;
+ v56885a_v3140f5 #(
+  .SEG(p0)
+ ) v3140f5 (
+  .start(w1),
+  .p(w2),
+  .tic(w3),
+  .clk(w4)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- timer-sec
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- Temporizador en segundos. La señal p está activa durante el tiempo indicado. Por tic se emite un tic al finalizar
+//---------------------------------------------------
+
+module v56885a_v3140f5 #(
+ parameter SEG = 0
+) (
+ input clk,
+ input start,
+ output p,
+ output tic
+);
+ //localparam SEC;
+ 
+ //-- Constante para dividir y obtener una frecuencia de 1Hz
+ localparam M = 12000000;
+ 
+ //-- Calcular el numero de bits para almacenar M
+ localparam N = $clog2(M);
+ 
+ //-- Cable de reset para el corazon
+ wire rst_heart;
+ 
+ //-- Overflow del temporizador del corazon
+ wire ov_heart;
+ 
+ //-- Habilitacion del corazon
+ wire ena;
+ 
+ //-- Tics del corazon
+ wire tic_heart;
+ 
+ //-- Contador del corazon
+ reg [N-1:0] heart=0;
+ 
+ always @(posedge clk)
+   if (rst_heart)
+     heart <= 0;
+   else
+     heart <= heart + 1;
+ 
+ //-- Overflow del contador
+ assign ov_heart = (heart == M-1);
+ 
+ //-- La salida del corazon es la señal de overflow
+ assign tic_heart = ov_heart;
+ 
+ //-- Reset del corazon
+ assign rst_heart =~ena | ov_heart;
+ 
+ 
+ 
+ //--------------------------------------------
+ //-- Contador de tics
+ //--------------------------------------------
+ reg [7:0] counter = 0;
+ 
+ //-- Overflow del contador
+ wire ov;
+ 
+ //-- Señal de reset del contador
+ wire rst;
+ 
+ always @(posedge clk)
+ if (rst)
+   counter <= 0;
+ else
+   if (tic_heart)
+     counter <= counter + 1;
+ 
+ //-- Evento: cuenta máxima de tics alcanzada
+ assign ov = (counter == SEG);
+ 
+ //---------------------------------------
+ //-- Biestable de estado del timer
+ //-- 0: Apagado  
+ //-- 1: Funcionando
+ reg q = 0;
+ 
+ always @(posedge clk)
+   if (start)
+     q <= 1'b1;
+   else if (rst)
+     q<=1'b0;
+     
+ //-- Lógica de reset
+ //En función de la entrada, el estado y  
+ // el overflow se inicializa el contador y 
+ // se habilita el corazón de tics
+ assign rst = ~q | ov | start;
+ assign ena = ~rst;
+ 
+ //-- Salida de pulso
+ assign p = q;
+ 
+ //-- Salida de tic
+ //-- Saca un tic cuando ha finalizado la cuenta
+ assign tic = ov;
+ 
+endmodule
+//---- Top entity
+module vcd03fe (
+ input [3:0] v54ac99,
+ input [3:0] ve2616d,
+ input v2d3366,
+ output [3:0] v6833fd
+);
+ wire w0;
+ wire w1;
+ wire w2;
+ wire [0:3] w3;
+ wire w4;
+ wire [0:3] w5;
+ wire [0:3] w6;
+ wire w7;
+ wire w8;
+ wire w9;
+ wire w10;
+ wire w11;
+ wire w12;
+ wire w13;
+ wire w14;
+ wire w15;
+ wire w16;
+ wire w17;
+ wire w18;
+ assign v6833fd = w3;
+ assign w5 = ve2616d;
+ assign w6 = v54ac99;
+ assign w9 = v2d3366;
+ assign w10 = v2d3366;
+ assign w11 = v2d3366;
+ assign w12 = v2d3366;
+ assign w10 = w9;
+ assign w11 = w9;
+ assign w11 = w10;
+ assign w12 = w9;
+ assign w12 = w10;
+ assign w12 = w11;
+ vd0c4e5 v6d94c9 (
+  .v030ad0(w0),
+  .v2d3366(w11),
+  .v27dec4(w15),
+  .vb192d0(w17)
+ );
+ vd0c4e5 vebe465 (
+  .v030ad0(w1),
+  .v2d3366(w12),
+  .v27dec4(w16),
+  .vb192d0(w18)
+ );
+ vd0c4e5 ve1c21f (
+  .v030ad0(w2),
+  .v2d3366(w10),
+  .v27dec4(w13),
+  .vb192d0(w14)
+ );
+ v84f0a1 va44bdf (
+  .vee8a83(w0),
+  .v03aaf0(w1),
+  .vf8041d(w2),
+  .v11bca5(w3),
+  .vd84a57(w4)
+ );
+ vd0c4e5 v2ebff3 (
+  .v030ad0(w4),
+  .v27dec4(w7),
+  .vb192d0(w8),
+  .v2d3366(w9)
+ );
+ vc4f23a v3c3a57 (
+  .v985fcb(w5),
+  .v4f1fd3(w8),
+  .vda577d(w14),
+  .v3f8943(w17),
+  .v64d863(w18)
+ );
+ vc4f23a vd6d480 (
+  .v985fcb(w6),
+  .v4f1fd3(w7),
+  .vda577d(w13),
+  .v3f8943(w15),
+  .v64d863(w16)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- 4-bits-Mux-2-1
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- 2-to-1 Multplexer (4-bit channels)
+//---------------------------------------------------
+//---- Top entity
+module vd0c4e5 (
+ input v27dec4,
+ input vb192d0,
+ input v2d3366,
+ output v030ad0
+);
+ wire w0;
+ wire w1;
+ wire w2;
+ wire w3;
+ wire w4;
+ wire w5;
+ wire w6;
+ wire w7;
+ assign v030ad0 = w0;
+ assign w2 = v2d3366;
+ assign w3 = v2d3366;
+ assign w6 = v27dec4;
+ assign w7 = vb192d0;
+ assign w3 = w2;
+ v873425 vaaee1f (
+  .vcbab45(w0),
+  .v0e28cb(w1),
+  .v3ca442(w4)
+ );
+ vba518e v569873 (
+  .vcbab45(w1),
+  .v3ca442(w2),
+  .v0e28cb(w6)
+ );
+ v3676a0 v1f00ae (
+  .v0e28cb(w3),
+  .vcbab45(w5)
+ );
+ vba518e vc8527f (
+  .vcbab45(w4),
+  .v3ca442(w5),
+  .v0e28cb(w7)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- Mux-2-1
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- 2-to-1 Multplexer (1-bit channels)
+//---------------------------------------------------
+//---- Top entity
+module v873425 (
+ input v0e28cb,
+ input v3ca442,
+ output vcbab45
+);
+ wire w0;
+ wire w1;
+ wire w2;
+ assign w0 = v0e28cb;
+ assign w1 = v3ca442;
+ assign vcbab45 = w2;
+ v873425_vf4938a vf4938a (
+  .a(w0),
+  .b(w1),
+  .c(w2)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- OR2
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- OR2: Two bits input OR gate
+//---------------------------------------------------
+
+module v873425_vf4938a (
+ input a,
+ input b,
+ output c
+);
+ //-- OR Gate
+ //-- Verilog implementation
+ 
+ assign c = a | b;
+ 
+ 
+endmodule
+//---- Top entity
+module vba518e (
+ input v0e28cb,
+ input v3ca442,
+ output vcbab45
+);
+ wire w0;
+ wire w1;
+ wire w2;
+ assign w0 = v0e28cb;
+ assign w1 = v3ca442;
+ assign vcbab45 = w2;
+ vba518e_vf4938a vf4938a (
+  .a(w0),
+  .b(w1),
+  .c(w2)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- AND2
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- Two bits input And gate
+//---------------------------------------------------
+
+module vba518e_vf4938a (
+ input a,
+ input b,
+ output c
+);
+ //-- AND gate
+ //-- Verilog implementation
+ 
+ assign c = a & b;
+ 
+endmodule
+//---- Top entity
+module v3676a0 (
+ input v0e28cb,
+ output vcbab45
+);
+ wire w0;
+ wire w1;
+ assign w0 = v0e28cb;
+ assign vcbab45 = w1;
+ v3676a0_vd54ca1 vd54ca1 (
+  .a(w0),
+  .q(w1)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- NOT
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- NOT gate (Verilog implementation)
+//---------------------------------------------------
+
+module v3676a0_vd54ca1 (
+ input a,
+ output q
+);
+ //-- NOT Gate
+ assign q = ~a;
+ 
+ 
+endmodule
+//---- Top entity
+module v84f0a1 (
+ input vd84a57,
+ input vf8041d,
+ input vee8a83,
+ input v03aaf0,
+ output [3:0] v11bca5
+);
+ wire w0;
+ wire w1;
+ wire w2;
+ wire w3;
+ wire [0:3] w4;
+ assign w0 = vee8a83;
+ assign w1 = v03aaf0;
+ assign w2 = vf8041d;
+ assign w3 = vd84a57;
+ assign v11bca5 = w4;
+ v84f0a1_v9a2a06 v9a2a06 (
+  .i1(w0),
+  .i0(w1),
+  .i2(w2),
+  .i3(w3),
+  .o(w4)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- Bus4-Join-all
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- Bus4-Join-all: Join all the wires into a 4-bits Bus
+//---------------------------------------------------
+
+module v84f0a1_v9a2a06 (
+ input i3,
+ input i2,
+ input i1,
+ input i0,
+ output [3:0] o
+);
+ assign o = {i3, i2, i1, i0};
+ 
+endmodule
+//---- Top entity
+module vc4f23a (
+ input [3:0] v985fcb,
+ output v4f1fd3,
+ output vda577d,
+ output v3f8943,
+ output v64d863
+);
+ wire w0;
+ wire w1;
+ wire w2;
+ wire w3;
+ wire [0:3] w4;
+ assign v3f8943 = w0;
+ assign v64d863 = w1;
+ assign vda577d = w2;
+ assign v4f1fd3 = w3;
+ assign w4 = v985fcb;
+ vc4f23a_v9a2a06 v9a2a06 (
+  .o1(w0),
+  .o0(w1),
+  .o2(w2),
+  .o3(w3),
+  .i(w4)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- Bus4-Split-all
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- Bus4-Split-all: Split the 4-bits bus into its wires
+//---------------------------------------------------
+
+module vc4f23a_v9a2a06 (
+ input [3:0] i,
+ output o3,
+ output o2,
+ output o1,
+ output o0
+);
+ assign o3 = i[3];
+ assign o2 = i[2];
+ assign o1 = i[1];
+ assign o0 = i[0];
+endmodule
+//---- Top entity
+module v1740c5 #(
+ parameter vfffc23 = 1
+) (
+ output [3:0] v919d0f
+);
+ localparam p0 = vfffc23;
+ wire [0:3] w1;
+ assign v919d0f = w1;
+ v9b9118 #(
+  .vc5c8ea(p0)
+ ) v76a485 (
+  .v1ef182(w1)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- 4bits-Value_1
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- 4bits constant value: 1
+//---------------------------------------------------
+//---- Top entity
+module v9b9118 #(
+ parameter vc5c8ea = 0
+) (
+ output [3:0] v1ef182
+);
+ localparam p0 = vc5c8ea;
+ wire [0:3] w1;
+ assign v1ef182 = w1;
+ v9b9118_v465065 #(
+  .VALUE(p0)
+ ) v465065 (
+  .k(w1)
+ );
+endmodule
+
+//---------------------------------------------------
+//-- 4-bits-gen-constant
+//-- - - - - - - - - - - - - - - - - - - - - - - - --
+//-- Generic: 4-bits generic constant (0-15)
+//---------------------------------------------------
+
+module v9b9118_v465065 #(
+ parameter VALUE = 0
+) (
+ output [3:0] k
+);
+ assign k = VALUE;
 endmodule
 
 module main_vf24429 (
