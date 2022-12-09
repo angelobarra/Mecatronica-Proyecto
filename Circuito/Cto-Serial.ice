@@ -111,6 +111,18 @@
           }
         },
         {
+          "id": "6b79eb1d-43e6-420d-973f-5d88aa06cdab",
+          "type": "56885ab64e12213b46de80c07e194ba74e261a50",
+          "position": {
+            "x": 1120,
+            "y": 360
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
           "id": "d0d123aa-065f-46a7-b867-991b98e82d7a",
           "type": "basic.code",
           "data": {
@@ -120,6 +132,9 @@
                   "name": "caracteres",
                   "range": "[7:0]",
                   "size": 8
+                },
+                {
+                  "name": "data_received"
                 }
               ],
               "out": [
@@ -131,7 +146,7 @@
               ]
             },
             "params": [],
-            "code": "reg[3:0] s;\n\nalways @*\nbegin\nif(caracteres == \"W\")\n   begin\n    s = 4'b1001; \n   end\n   \nelse if(caracteres == \"S\")\n    begin\n     s = 4'b0001; \n    end\n\nelse if(caracteres == \"A\")\n    begin\n     s = 4'b0100; \n    end    \nelse if(caracteres == \"D\")\n    begin\n     s = 4'b0110; \n    end\nelse \n   begin\n    s = 4'b0101; \n   \n   end\n\nend\n\nassign estado = s;\n    \n\n    "
+            "code": "reg[3:0] s;\n\nalways @*\nbegin\nif((caracteres == \"W\" || caracteres == \"w\") && data_received == 1)\n   begin\n    s = 4'b1001; \n   end\n   \nelse if((caracteres == \"S\" || caracteres == \"s\") && data_received == 1)\n    begin\n     s = 4'b0001; \n    end\n\nelse if((caracteres == \"A\" || caracteres == \"a\") && data_received == 1)\n    begin\n     s = 4'b0100; \n    end    \nelse if((caracteres == \"D\" || caracteres == \"d\") && data_received == 1)\n    begin\n     s = 4'b0110; \n    end\nelse \n   begin\n    s = 4'b0101; \n   \n   end\n\nend\n\nassign estado = s;\n    \n\n    "
           },
           "position": {
             "x": 640,
@@ -140,18 +155,6 @@
           "size": {
             "width": 704,
             "height": 408
-          }
-        },
-        {
-          "id": "6b79eb1d-43e6-420d-973f-5d88aa06cdab",
-          "type": "56885ab64e12213b46de80c07e194ba74e261a50",
-          "position": {
-            "x": 1120,
-            "y": 360
-          },
-          "size": {
-            "width": 96,
-            "height": 64
           }
         }
       ],
@@ -229,6 +232,26 @@
             "block": "f78d487c-0053-4f86-8bac-5ed1cbf6b138",
             "port": "in"
           }
+        },
+        {
+          "source": {
+            "block": "6b79eb1d-43e6-420d-973f-5d88aa06cdab",
+            "port": "c45dab76-9d0f-4742-9e4d-3048637d245d"
+          },
+          "target": {
+            "block": "d0d123aa-065f-46a7-b867-991b98e82d7a",
+            "port": "data_received"
+          },
+          "vertices": [
+            {
+              "x": 960,
+              "y": 528
+            },
+            {
+              "x": 488,
+              "y": 736
+            }
+          ]
         }
       ]
     }
